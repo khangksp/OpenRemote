@@ -1,0 +1,831 @@
+2024-08-16 18:06:11.157  INFO    [main                          ] org.openremote.container.Container       : Metrics enabled: true
+2024-08-16 18:06:11.231  INFO    [main                          ] org.openremote.container.Container       : >>> Starting runtime container...
+2024-08-16 18:06:11.232  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.syslog.SyslogService
+2024-08-16 18:06:11.234  INFO    [main                          ] .openremote.manager.syslog.SyslogService : Syslog service enabled
+2024-08-16 18:06:11.238  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.persistence.ManagerPersistenceService
+2024-08-16 18:06:11.240  INFO    [main                          ] container.persistence.PersistenceService : Preparing persistence service for database: POSTGRES
+2024-08-16 18:06:11.303  INFO    [main                          ] container.persistence.PersistenceService : Setting storage directory to '/storage'
+2024-08-16 18:06:11.304  INFO    [main                          ] container.persistence.PersistenceService : Opening database connection: jdbc:postgresql://postgresql:5432/openremote?currentSchema=openremote
+2024-08-16 18:06:12.007  WARNING [main                          ] ernal.sqlscript.DefaultSqlScriptExecutor : DB: extension "timescaledb" already exists, skipping (SQL State: 42710 - Error Code: 0)
+2024-08-16 18:06:12.012  WARNING [main                          ] ernal.sqlscript.DefaultSqlScriptExecutor : DB: extension "timescaledb_toolkit" already exists, skipping (SQL State: 42710 - Error Code: 0)
+2024-08-16 18:06:12.015  INFO    [main                          ] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://postgresql:5432/openremote (PostgreSQL 15.1)
+2024-08-16 18:06:12.078  INFO    [main                          ] nal.schemahistory.JdbcTableSchemaHistory : Schema history table "openremote"."flyway_schema_history" does not exist yet
+2024-08-16 18:06:12.110  WARNING [main                          ] ernal.sqlscript.DefaultSqlScriptExecutor : DB: extension "timescaledb" already exists, skipping (SQL State: 42710 - Error Code: 0)
+2024-08-16 18:06:12.112  WARNING [main                          ] ernal.sqlscript.DefaultSqlScriptExecutor : DB: extension "timescaledb_toolkit" already exists, skipping (SQL State: 42710 - Error Code: 0)
+2024-08-16 18:06:12.122  WARNING [main                          ] container.persistence.PersistenceService : DB is empty so changing forceClean to true
+2024-08-16 18:06:12.123  WARNING [main                          ] container.persistence.PersistenceService : !!! Cleaning database !!!
+2024-08-16 18:06:12.147  WARNING [main                          ] ernal.sqlscript.DefaultSqlScriptExecutor : DB: extension "timescaledb" already exists, skipping (SQL State: 42710 - Error Code: 0)
+2024-08-16 18:06:12.149  WARNING [main                          ] ernal.sqlscript.DefaultSqlScriptExecutor : DB: extension "timescaledb_toolkit" already exists, skipping (SQL State: 42710 - Error Code: 0)
+2024-08-16 18:06:12.160  INFO    [main                          ] nal.schemahistory.JdbcTableSchemaHistory : Schema history table "openremote"."flyway_schema_history" does not exist yet
+2024-08-16 18:06:12.163  INFO    [main                          ] ore.internal.command.clean.CleanExecutor : Successfully dropped pre-schema database level objects (execution time 00:00.000s)
+2024-08-16 18:06:12.166  WARNING [main                          ] ore.internal.command.clean.CleanExecutor : Unable to clean unknown schema: "openremote"
+2024-08-16 18:06:12.168  INFO    [main                          ] ore.internal.command.clean.CleanExecutor : Successfully dropped post-schema database level objects (execution time 00:00.000s)
+2024-08-16 18:06:12.190  WARNING [main                          ] ernal.sqlscript.DefaultSqlScriptExecutor : DB: extension "timescaledb" already exists, skipping (SQL State: 42710 - Error Code: 0)
+2024-08-16 18:06:12.193  WARNING [main                          ] ernal.sqlscript.DefaultSqlScriptExecutor : DB: extension "timescaledb_toolkit" already exists, skipping (SQL State: 42710 - Error Code: 0)
+2024-08-16 18:06:12.224  WARNING [main                          ] ernal.sqlscript.DefaultSqlScriptExecutor : DB: extension "timescaledb" already exists, skipping (SQL State: 42710 - Error Code: 0)
+2024-08-16 18:06:12.226  WARNING [main                          ] ernal.sqlscript.DefaultSqlScriptExecutor : DB: extension "timescaledb_toolkit" already exists, skipping (SQL State: 42710 - Error Code: 0)
+2024-08-16 18:06:12.242  INFO    [main                          ] nal.schemahistory.JdbcTableSchemaHistory : Schema history table "openremote"."flyway_schema_history" does not exist yet
+2024-08-16 18:06:12.260  WARNING [main                          ] ernal.sqlscript.DefaultSqlScriptExecutor : DB: extension "timescaledb" already exists, skipping (SQL State: 42710 - Error Code: 0)
+2024-08-16 18:06:12.262  WARNING [main                          ] ernal.sqlscript.DefaultSqlScriptExecutor : DB: extension "timescaledb_toolkit" already exists, skipping (SQL State: 42710 - Error Code: 0)
+2024-08-16 18:06:12.268  INFO    [main                          ] container.persistence.PersistenceService : Pending task: 20191202.01, Schema, V20191202_01__Schema.sql
+2024-08-16 18:06:12.269  INFO    [main                          ] container.persistence.PersistenceService : Pending task: 20220523.03, RenameTenantRuleset, V20220523_03__RenameTenantRuleset.sql
+2024-08-16 18:06:12.270  INFO    [main                          ] container.persistence.PersistenceService : Pending task: 20220705.01, Schema, V20220705_01__Schema.sql
+2024-08-16 18:06:12.271  INFO    [main                          ] container.persistence.PersistenceService : Pending task: 20221219.01, HelperFunctions, V20221219_01__HelperFunctions.sql
+2024-08-16 18:06:12.272  INFO    [main                          ] container.persistence.PersistenceService : Pending task: 20230105.01, HelperFunctionsFix, V20230105_01__HelperFunctionsFix.sql
+2024-08-16 18:06:12.272  INFO    [main                          ] container.persistence.PersistenceService : Pending task: 20230120.01, Timescale, V20230120_01__Timescale.sql
+2024-08-16 18:06:12.273  INFO    [main                          ] container.persistence.PersistenceService : Pending task: 20240508.01, Gateways, V20240508_01__Gateways.sql
+2024-08-16 18:06:12.274  INFO    [main                          ] container.persistence.PersistenceService : Pending task: 20240711.01, UpdateGatewayConnection, V20240711_01__UpdateGatewayConnection.sql
+2024-08-16 18:06:12.274  INFO    [main                          ] container.persistence.PersistenceService : Pending task: 20240722.01, Indexes, V20240722_01__Indexes.sql
+2024-08-16 18:06:12.297  WARNING [main                          ] ernal.sqlscript.DefaultSqlScriptExecutor : DB: extension "timescaledb" already exists, skipping (SQL State: 42710 - Error Code: 0)
+2024-08-16 18:06:12.298  WARNING [main                          ] ernal.sqlscript.DefaultSqlScriptExecutor : DB: extension "timescaledb_toolkit" already exists, skipping (SQL State: 42710 - Error Code: 0)
+2024-08-16 18:06:12.317  INFO    [main                          ] waydb.core.internal.database.base.Schema : Creating schema "openremote" ...
+2024-08-16 18:06:12.328  INFO    [main                          ] nal.schemahistory.JdbcTableSchemaHistory : Creating Schema History table "openremote"."flyway_schema_history" ...
+2024-08-16 18:06:12.412  WARNING [main                          ] ernal.sqlscript.DefaultSqlScriptExecutor : DB: extension "timescaledb" already exists, skipping (SQL State: 42710 - Error Code: 0)
+2024-08-16 18:06:12.415  WARNING [main                          ] ernal.sqlscript.DefaultSqlScriptExecutor : DB: extension "timescaledb_toolkit" already exists, skipping (SQL State: 42710 - Error Code: 0)
+2024-08-16 18:06:12.427  INFO    [main                          ] flywaydb.core.internal.command.DbMigrate : Current version of schema "openremote": null
+2024-08-16 18:06:12.472  INFO    [main                          ] flywaydb.core.internal.command.DbMigrate : Migrating schema "openremote" to version "20191202.01 - Schema"
+2024-08-16 18:06:12.955  INFO    [main                          ] flywaydb.core.internal.command.DbMigrate : Migrating schema "openremote" to version "20220523.03 - RenameTenantRuleset"
+2024-08-16 18:06:12.964  INFO    [main                          ] flywaydb.core.internal.command.DbMigrate : Migrating schema "openremote" to version "20220705.01 - Schema"
+2024-08-16 18:06:12.979  INFO    [main                          ] flywaydb.core.internal.command.DbMigrate : Migrating schema "openremote" to version "20221219.01 - HelperFunctions"
+2024-08-16 18:06:12.990  INFO    [main                          ] flywaydb.core.internal.command.DbMigrate : Migrating schema "openremote" to version "20230105.01 - HelperFunctionsFix"
+2024-08-16 18:06:12.999  INFO    [main                          ] flywaydb.core.internal.command.DbMigrate : Migrating schema "openremote" to version "20230120.01 - Timescale"
+2024-08-16 18:06:13.005  WARNING [main                          ] ernal.sqlscript.DefaultSqlScriptExecutor : DB: column type "timestamp without time zone" used for "timestamp" does not follow best practices (SQL State: 01000 - Error Code: 0)
+2024-08-16 18:06:13.005  WARNING [main                          ] ernal.sqlscript.DefaultSqlScriptExecutor : DB: column type "character varying" used for "entity_id" does not follow best practices (SQL State: 01000 - Error Code: 0)
+2024-08-16 18:06:13.006  WARNING [main                          ] ernal.sqlscript.DefaultSqlScriptExecutor : DB: column type "character varying" used for "attribute_name" does not follow best practices (SQL State: 01000 - Error Code: 0)
+2024-08-16 18:06:13.007  INFO    [main                          ] ernal.sqlscript.DefaultSqlScriptExecutor : +----------------------------------+
+| create_hypertable                |
++----------------------------------+
+| (1,openremote,asset_datapoint,t) |
++----------------------------------+
+
+2024-08-16 18:06:13.010  WARNING [main                          ] ernal.sqlscript.DefaultSqlScriptExecutor : DB: column type "timestamp without time zone" used for "timestamp" does not follow best practices (SQL State: 01000 - Error Code: 0)
+2024-08-16 18:06:13.011  WARNING [main                          ] ernal.sqlscript.DefaultSqlScriptExecutor : DB: column type "character varying" used for "entity_id" does not follow best practices (SQL State: 01000 - Error Code: 0)
+2024-08-16 18:06:13.011  WARNING [main                          ] ernal.sqlscript.DefaultSqlScriptExecutor : DB: column type "character varying" used for "attribute_name" does not follow best practices (SQL State: 01000 - Error Code: 0)
+2024-08-16 18:06:13.012  INFO    [main                          ] ernal.sqlscript.DefaultSqlScriptExecutor : +--------------------------------------------+
+| create_hypertable                          |
++--------------------------------------------+
+| (2,openremote,asset_predicted_datapoint,t) |
++--------------------------------------------+
+
+2024-08-16 18:06:13.019  INFO    [main                          ] flywaydb.core.internal.command.DbMigrate : Migrating schema "openremote" to version "20240508.01 - Gateways"
+2024-08-16 18:06:13.022  INFO    [main                          ] ernal.sqlscript.DefaultSqlScriptExecutor : +----+---------------+
+| id | add_attribute |
++----+---------------+
+| No rows returned   |
++----+---------------+
+
+2024-08-16 18:06:13.031  INFO    [main                          ] flywaydb.core.internal.command.DbMigrate : Migrating schema "openremote" to version "20240711.01 - UpdateGatewayConnection"
+2024-08-16 18:06:13.047  INFO    [main                          ] flywaydb.core.internal.command.DbMigrate : Migrating schema "openremote" to version "20240722.01 - Indexes"
+2024-08-16 18:06:13.057  WARNING [main                          ] ernal.sqlscript.DefaultSqlScriptExecutor : DB: identifier "asset_predicted_datapoint_entity_id_attribute_name_timestamp_idx" will be truncated to "asset_predicted_datapoint_entity_id_attribute_name_timestamp_id" (SQL State: 42622 - Error Code: 0)
+2024-08-16 18:06:13.074  INFO    [main                          ] flywaydb.core.internal.command.DbMigrate : Successfully applied 9 migrations to schema "openremote", now at version v20240722.01 (execution time 00:00.517s)
+2024-08-16 18:06:13.078  INFO    [main                          ] container.persistence.PersistenceService : Applied database schema migrations: 9
+2024-08-16 18:06:13.096  WARNING [main                          ] ernal.sqlscript.DefaultSqlScriptExecutor : DB: extension "timescaledb" already exists, skipping (SQL State: 42710 - Error Code: 0)
+2024-08-16 18:06:13.097  WARNING [main                          ] ernal.sqlscript.DefaultSqlScriptExecutor : DB: extension "timescaledb_toolkit" already exists, skipping (SQL State: 42710 - Error Code: 0)
+2024-08-16 18:06:13.115  INFO    [main                          ] lywaydb.core.internal.command.DbValidate : Successfully validated 10 migrations (execution time 00:00.012s)
+2024-08-16 18:06:13.129  WARNING [main                          ] ernal.sqlscript.DefaultSqlScriptExecutor : DB: extension "timescaledb" already exists, skipping (SQL State: 42710 - Error Code: 0)
+2024-08-16 18:06:13.130  WARNING [main                          ] ernal.sqlscript.DefaultSqlScriptExecutor : DB: extension "timescaledb_toolkit" already exists, skipping (SQL State: 42710 - Error Code: 0)
+2024-08-16 18:06:13.134  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.security.ManagerIdentityService
+2024-08-16 18:06:13.135  INFO    [main                          ] .manager.security.ManagerIdentityService : Enabling Keycloak identity provider
+2024-08-16 18:06:13.160  INFO    [main                          ] curity.keycloak.KeycloakIdentityProvider : Keycloak service URL: http://keycloak:8080/auth
+2024-08-16 18:06:13.505  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.asset.AssetModelService
+2024-08-16 18:06:13.509  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.setup.SetupService
+2024-08-16 18:06:13.509  INFO    [main                          ] rg.openremote.manager.setup.SetupService : OR_SETUP_TYPE value: null
+2024-08-16 18:06:13.513  INFO    [main                          ] rg.openremote.manager.setup.SetupService : --- EXECUTING INIT TASKS ---
+2024-08-16 18:06:13.514  INFO    [main                          ] rg.openremote.manager.setup.SetupService : Executing setup task 'org.openremote.manager.setup.KeycloakCleanSetup'
+2024-08-16 18:06:13.514  INFO    [main                          ] rg.openremote.manager.setup.SetupService : Executing setup task 'org.openremote.manager.setup.KeycloakInitSetup'
+2024-08-16 18:06:13.515  INFO    [main                          ] rg.openremote.manager.setup.SetupService : --- INIT TASKS COMPLETED SUCCESSFULLY ---
+2024-08-16 18:06:13.515  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.setup.KeycloakInitService
+2024-08-16 18:06:13.546  INFO    [main                          ] remote.manager.setup.KeycloakInitService : Connecting to Keycloak server: http://keycloak:8080/auth
+2024-08-16 18:06:13.802  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.gateway.GatewayService
+2024-08-16 18:06:13.838  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.container.timer.TimerService
+2024-08-16 18:06:13.839  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.asset.AssetStorageService
+2024-08-16 18:06:13.851  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.mqtt.MQTTBrokerService
+2024-08-16 18:06:13.996  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.provisioning.ProvisioningService
+2024-08-16 18:06:13.997  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.datapoint.AssetDatapointService
+2024-08-16 18:06:14.000  INFO    [main                          ] .manager.datapoint.AssetDatapointService : Data point purge interval days = 31
+2024-08-16 18:06:14.001  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.datapoint.AssetPredictedDatapointService
+2024-08-16 18:06:14.002  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.rules.RulesetStorageService
+2024-08-16 18:06:14.004  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.asset.AttributeLinkingService
+2024-08-16 18:06:14.005  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.asset.AssetProcessingService
+2024-08-16 18:06:14.016  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.system.HealthService
+2024-08-16 18:06:14.018  INFO    [main                          ] .openremote.manager.system.HealthService : Health Status Provider: class org.openremote.container.persistence.PersistenceHealthStatusProvider
+2024-08-16 18:06:14.019  INFO    [main                          ] .openremote.manager.system.HealthService : Health Status Provider: class org.openremote.manager.system.JvmHealthStatusProvider
+2024-08-16 18:06:14.021  INFO    [main                          ] .openremote.manager.system.HealthService : Health Status Provider: class org.openremote.manager.system.SslHealthStatusProvider
+2024-08-16 18:06:14.021  INFO    [main                          ] .openremote.manager.system.HealthService : Health Status Provider: class org.openremote.manager.system.SystemHealthStatusProvider
+2024-08-16 18:06:14.022  INFO    [main                          ] .openremote.manager.system.HealthService : Health Status Provider: class org.openremote.manager.rules.RulesHealthStatusProvider
+2024-08-16 18:06:14.023  INFO    [main                          ] .openremote.manager.system.HealthService : Health Status Provider: class org.openremote.manager.agent.AgentHealthStatusProvider
+2024-08-16 18:06:14.024  INFO    [main                          ] .openremote.manager.system.HealthService : Health Status Provider: class org.openremote.manager.datapoint.AssetDatapointHealthStatusProvider
+2024-08-16 18:06:14.025  INFO    [main                          ] .openremote.manager.system.HealthService : Health Status Provider: class org.openremote.manager.datapoint.AssetPredictedDatapointHealthStatusProvider
+2024-08-16 18:06:14.026  INFO    [main                          ] .openremote.manager.system.HealthService : Health Status Provider: class org.openremote.manager.system.CamelHealthStatusProvider
+2024-08-16 18:06:14.028  INFO    [main                          ] .openremote.manager.system.HealthService : Metrics collection enabled
+2024-08-16 18:06:14.048  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.map.MapService
+2024-08-16 18:06:14.050  WARNING [main                          ] org.openremote.manager.map.MapService    : Map tiles data file not found '/deployment.local/mapdata/mapdata.mbtiles', falling back to built in map
+2024-08-16 18:06:14.054  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.notification.NotificationService
+2024-08-16 18:06:14.057  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.webhook.WebhookService
+2024-08-16 18:06:14.058  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.apps.ConsoleAppService
+2024-08-16 18:06:14.085  INFO    [main                          ] org.openremote.container.web.WebService  : Deploying insecure web context: /
+2024-08-16 18:06:14.180  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.notification.PushNotificationHandler
+2024-08-16 18:06:14.183  WARNING [main                          ] ger.notification.PushNotificationHandler : OR_FIREBASE_CONFIG_FILE invalid path or file not readable: /deployment/manager/fcm.json
+2024-08-16 18:06:14.183  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.notification.EmailNotificationHandler
+2024-08-16 18:06:14.184  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.gateway.GatewayClientService
+2024-08-16 18:06:14.187  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.energy.EnergyOptimisationService
+2024-08-16 18:06:14.188  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.energy.ForecastWindService
+2024-08-16 18:06:14.188  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.energy.ForecastSolarService
+2024-08-16 18:06:14.189  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.dashboard.DashboardStorageService
+2024-08-16 18:06:14.191  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.security.AuthorisationService
+2024-08-16 18:06:14.191  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.app.ConfigurationService
+2024-08-16 18:06:14.192  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.asset.ForecastService
+2024-08-16 18:06:14.193  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.event.ClientEventService
+2024-08-16 18:06:14.218  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.rules.RulesService
+2024-08-16 18:06:14.233  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.container.message.MessageBrokerService
+2024-08-16 18:06:14.246  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.agent.AgentService
+2024-08-16 18:06:14.255  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.web.ManagerWebService
+2024-08-16 18:06:14.272  INFO    [main                          ] org.openremote.container.web.WebService  : Building web routing with handler(s): Console app info files
+2024-08-16 18:06:14.331  INFO    [main                          ] emote.container.security.IdentityService : Securing web deployment: /api
+2024-08-16 18:06:14.727  INFO    [main                          ] org.openremote.container.web.WebService  : Deploying insecure web context: /
+2024-08-16 18:06:14.729  INFO    [main                          ] org.openremote.container.web.WebService  : Deploying insecure web context: /
+2024-08-16 18:06:14.732  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.rules.geofence.ORConsoleGeofenceAssetAdapter
+2024-08-16 18:06:14.735  INFO    [main                          ] te.model.util.ValueUtil.MODEL_AND_VALUES : Initialising asset model...
+2024-08-16 18:06:15.345  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.syslog.SyslogService
+2024-08-16 18:06:15.348  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.persistence.ManagerPersistenceService
+2024-08-16 18:06:16.497  WARN    [Cleaner-0                     ] org.jboss.resteasy.client.jaxrs.i18n     : RESTEASY004687: Closing a class org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$CleanupAction instance for you. Please close clients yourself.
+2024-08-16 18:06:18.590  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.security.ManagerIdentityService
+2024-08-16 18:06:18.591  INFO    [main                          ] curity.keycloak.KeycloakIdentityProvider : No stored credentials so using OR_ADMIN_PASSWORD
+2024-08-16 18:06:18.593  INFO    [main                          ] curity.keycloak.KeycloakIdentityProvider : Keycloak proxy URI set to: http://keycloak:8080/auth
+2024-08-16 18:06:18.594  INFO    [main                          ] curity.keycloak.KeycloakIdentityProvider : Validating keycloak credentials
+2024-08-16 18:06:19.377  INFO    [main                          ] curity.keycloak.KeycloakIdentityProvider : Credentials are valid
+2024-08-16 18:06:19.377  INFO    [main                          ] curity.keycloak.KeycloakIdentityProvider : OR_ADMIN_PASSWORD credentials are valid so creating/recreating stored credentials
+2024-08-16 18:06:20.311  INFO    [main                          ] curity.keycloak.KeycloakIdentityProvider : Stored credentials successfully generated so using them
+2024-08-16 18:06:20.312  INFO    [main                          ] curity.keycloak.KeycloakIdentityProvider : Keycloak proxy URI set to: http://keycloak:8080/auth
+2024-08-16 18:06:20.313  INFO    [main                          ] curity.keycloak.KeycloakIdentityProvider : Validating keycloak credentials
+2024-08-16 18:06:20.464  INFO    [main                          ] curity.keycloak.KeycloakIdentityProvider : Credentials are valid
+2024-08-16 18:06:20.464  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.asset.AssetModelService
+2024-08-16 18:06:20.465  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.setup.SetupService
+2024-08-16 18:06:20.465  INFO    [main                          ] rg.openremote.manager.setup.SetupService : --- EXECUTING START TASKS ---
+2024-08-16 18:06:20.466  INFO    [main                          ] rg.openremote.manager.setup.SetupService : Executing setup task 'org.openremote.manager.setup.KeycloakCleanSetup'
+2024-08-16 18:06:20.466  INFO    [main                          ] nremote.manager.setup.KeycloakCleanSetup : Deleting all non-master realms
+2024-08-16 18:06:20.504  INFO    [main                          ] nremote.manager.setup.KeycloakCleanSetup : Deleting all non-master admin users
+2024-08-16 18:06:20.521  INFO    [main                          ] nremote.manager.setup.KeycloakCleanSetup : Deleting all non default clients
+2024-08-16 18:06:20.617  INFO    [main                          ] rg.openremote.manager.setup.SetupService : Executing setup task 'org.openremote.manager.setup.KeycloakInitSetup'
+2024-08-16 18:06:21.575  INFO    [main                          ] rg.openremote.manager.setup.SetupService : --- START TASKS COMPLETED SUCCESSFULLY ---
+2024-08-16 18:06:21.576  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.setup.KeycloakInitService
+2024-08-16 18:06:21.576  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.gateway.GatewayService
+2024-08-16 18:06:21.597  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.container.timer.TimerService
+2024-08-16 18:06:21.598  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.asset.AssetStorageService
+2024-08-16 18:06:21.598  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.mqtt.MQTTBrokerService
+2024-08-16 18:06:21.680  INFO    [main                          ] org.apache.activemq.artemis.core.server  : AMQ221000: Primary message broker is starting with configuration Broker Configuration (clustered=false,journalDirectory=data/journal,bindingsDirectory=data/bindings,largeMessagesDirectory=data/largemessages,pagingDirectory=data/paging)
+2024-08-16 18:06:21.689  INFO    [main                          ] org.apache.activemq.artemis.core.server  : AMQ221045: libaio is not available, switching the configuration into NIO
+2024-08-16 18:06:21.711  INFO    [main                          ] org.apache.activemq.artemis.core.server  : AMQ221057: Global Max Size is being adjusted to 1/2 of the JVM max size (-Xmx). being defined as 1073741824
+2024-08-16 18:06:21.744  INFO    [main                          ] org.apache.activemq.artemis.core.server  : AMQ221043: Protocol module found: [artemis-server]. Adding protocol support for: CORE
+2024-08-16 18:06:21.745  INFO    [main                          ] org.apache.activemq.artemis.core.server  : AMQ221043: Protocol module found: [artemis-mqtt-protocol]. Adding protocol support for: MQTT
+2024-08-16 18:06:21.787  INFO    [main                          ] org.apache.activemq.artemis.core.server  : AMQ224092: Despite disabled persistence, page files will be persisted.
+2024-08-16 18:06:22.142  INFO    [main                          ] org.apache.activemq.artemis.core.server  : AMQ221020: Started EPOLL Acceptor at 0.0.0.0:1883 for protocols [MQTT]
+2024-08-16 18:06:22.143  INFO    [main                          ] org.apache.activemq.artemis.core.server  : AMQ221007: Server is now active
+2024-08-16 18:06:22.144  INFO    [main                          ] org.apache.activemq.artemis.core.server  : AMQ221001: Apache ActiveMQ Artemis Message Broker version 2.35.0 [localhost, nodeID=7ac05fe7-5be9-11ef-a6bc-0242ac130004] 
+2024-08-16 18:06:22.241  INFO    [main                          ] mote.manager.mqtt.DefaultMQTTHandler.API : Adding publish consumer for topic '+/+/writeattributevalue/#': handler=DefaultMQTTHandler
+2024-08-16 18:06:22.258  INFO    [main                          ] qtt.UserAssetProvisioningMQTTHandler.API : Adding publish consumer for topic 'provisioning/+/request': handler=UserAssetProvisioningMQTTHandler
+2024-08-16 18:06:22.268  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.provisioning.ProvisioningService
+2024-08-16 18:06:22.268  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.datapoint.AssetDatapointService
+2024-08-16 18:06:22.270  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.datapoint.AssetPredictedDatapointService
+2024-08-16 18:06:22.270  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.rules.RulesetStorageService
+2024-08-16 18:06:22.271  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.asset.AttributeLinkingService
+2024-08-16 18:06:22.271  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.asset.AssetProcessingService
+2024-08-16 18:06:22.271  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.system.HealthService
+2024-08-16 18:06:22.272  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.map.MapService
+2024-08-16 18:06:22.273  INFO    [main                          ] org.openremote.manager.map.MapService    : Starting map service with tile data: /deployment/map/mapdata.mbtiles
+2024-08-16 18:06:22.392  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.notification.NotificationService
+2024-08-16 18:06:22.393  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.webhook.WebhookService
+2024-08-16 18:06:22.393  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.apps.ConsoleAppService
+2024-08-16 18:06:22.394  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.notification.PushNotificationHandler
+2024-08-16 18:06:22.394  WARNING [main                          ] ger.notification.PushNotificationHandler : FCM configuration invalid so cannot start
+2024-08-16 18:06:22.394  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.notification.EmailNotificationHandler
+2024-08-16 18:06:22.395  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.gateway.GatewayClientService
+2024-08-16 18:06:22.401  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.energy.EnergyOptimisationService
+2024-08-16 18:06:22.405  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.energy.ForecastWindService
+2024-08-16 18:06:22.405  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.energy.ForecastSolarService
+2024-08-16 18:06:22.406  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.dashboard.DashboardStorageService
+2024-08-16 18:06:22.406  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.security.AuthorisationService
+2024-08-16 18:06:22.407  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.app.ConfigurationService
+2024-08-16 18:06:22.407  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.asset.ForecastService
+2024-08-16 18:06:22.415  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.event.ClientEventService
+2024-08-16 18:06:22.415  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.rules.RulesService
+2024-08-16 18:06:22.449  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.container.message.MessageBrokerService
+2024-08-16 18:06:22.449  INFO    [main                          ] e.container.message.MessageBrokerService : Starting Camel message broker
+2024-08-16 18:06:22.662  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext : Apache Camel 4.0.4 (camel-1) is starting
+2024-08-16 18:06:22.765  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext : Using ThreadPoolFactory: org.openremote.container.message.MessageBrokerService$1@5775a262
+2024-08-16 18:06:22.986  INFO    [main                          ] emote.container.security.IdentityService : Securing web deployment: /websocket/events
+2024-08-16 18:06:23.024  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext : Routes startup (started:38)
+2024-08-16 18:06:23.027  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started Persistence-GatewayAsset (seda://PersistenceTopic)
+2024-08-16 18:06:23.027  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started Persistence-Asset (seda://PersistenceTopic)
+2024-08-16 18:06:23.028  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started ClientInbound-Query (seda://ClientInboundQueue)
+2024-08-16 18:06:23.033  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started Persistence-UserAndAssetLink (seda://PersistenceTopic)
+2024-08-16 18:06:23.033  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started ClientOutbound-DefaultMQTTHandler (seda://ClientOutboundQueue)
+2024-08-16 18:06:23.034  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started Persistence-MQTTConnectedAttributes (seda://PersistenceTopic)
+2024-08-16 18:06:23.034  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started Persistence-MonitorProvisioningConfigs (seda://PersistenceTopic)
+2024-08-16 18:06:23.035  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started AttributeEvent-Router (seda://AttributeEventRouter)
+2024-08-16 18:06:23.035  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started AttributeEvent-Processor1 (seda://AttributeEventProcessor1)
+2024-08-16 18:06:23.036  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started AttributeEvent-Processor2 (seda://AttributeEventProcessor2)
+2024-08-16 18:06:23.036  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started AttributeEvent-Processor3 (seda://AttributeEventProcessor3)
+2024-08-16 18:06:23.036  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started AttributeEvent-Processor4 (seda://AttributeEventProcessor4)
+2024-08-16 18:06:23.037  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started AttributeEvent-Processor5 (seda://AttributeEventProcessor5)
+2024-08-16 18:06:23.037  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started AttributeEvent-Processor6 (seda://AttributeEventProcessor6)
+2024-08-16 18:06:23.038  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started AttributeEvent-Processor7 (seda://AttributeEventProcessor7)
+2024-08-16 18:06:23.038  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started AttributeEvent-Processor8 (seda://AttributeEventProcessor8)
+2024-08-16 18:06:23.039  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started AttributeEvent-Processor9 (seda://AttributeEventProcessor9)
+2024-08-16 18:06:23.039  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started AttributeEvent-Processor10 (seda://AttributeEventProcessor10)
+2024-08-16 18:06:23.039  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started AttributeEvent-Processor11 (seda://AttributeEventProcessor11)
+2024-08-16 18:06:23.040  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started AttributeEvent-Processor12 (seda://AttributeEventProcessor12)
+2024-08-16 18:06:23.040  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started AttributeEvent-Processor13 (seda://AttributeEventProcessor13)
+2024-08-16 18:06:23.041  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started AttributeEvent-Processor14 (seda://AttributeEventProcessor14)
+2024-08-16 18:06:23.041  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started AttributeEvent-Processor15 (seda://AttributeEventProcessor15)
+2024-08-16 18:06:23.042  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started AttributeEvent-Processor16 (seda://AttributeEventProcessor16)
+2024-08-16 18:06:23.042  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started NotificationQueue (seda://NotificationQueue)
+2024-08-16 18:06:23.046  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started Persistence-PushNotificationConsoleAsset (seda://PersistenceTopic)
+2024-08-16 18:06:23.047  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started Persistence-GatewayConnection (seda://PersistenceTopic)
+2024-08-16 18:06:23.048  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started ClientInbound-Websocket (ws://0.0.0.0/websocket/events)
+2024-08-16 18:06:23.048  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started ClientInbound-EventProcessor (seda://ClientInboundQueue)
+2024-08-16 18:06:23.049  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started ClientOutbound-Splitter (seda://ClientPublishQueue)
+2024-08-16 18:06:23.049  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started ClientOutbound-Websocket (seda://ClientOutboundQueue)
+2024-08-16 18:06:23.050  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started Persistence-Ruleset (seda://PersistenceTopic)
+2024-08-16 18:06:23.050  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started Persistence-RulesRealm (seda://PersistenceTopic)
+2024-08-16 18:06:23.051  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started Persistence-RulesAsset (seda://PersistenceTopic)
+2024-08-16 18:06:23.051  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started Persistence-GeofenceAdapterConsoleAsset (seda://PersistenceTopic)
+2024-08-16 18:06:23.051  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started Persistence-ProvisioningConfig (seda://PersistenceTopic)
+2024-08-16 18:06:23.052  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started Persistence-EnergyOptimisation (seda://PersistenceTopic)
+2024-08-16 18:06:23.052  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started Persistence-ForecastConfiguration (seda://PersistenceTopic)
+2024-08-16 18:06:23.053  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext : Apache Camel 4.0.4 (camel-1) started in 390ms (build:0ms init:0ms start:390ms)
+2024-08-16 18:06:23.057  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.agent.AgentService
+2024-08-16 18:06:23.078  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.web.ManagerWebService
+2024-08-16 18:06:23.189  INFO    [main                          ] org.jboss.threads                        : JBoss Threads version 3.5.0.Final
+2024-08-16 18:06:23.250  INFO    [main                          ] org.openremote.container.web.WebService  : Webserver ready on http://0.0.0.0:8080
+2024-08-16 18:06:23.251  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.rules.geofence.ORConsoleGeofenceAssetAdapter
+2024-08-16 18:06:23.255  INFO    [main                          ] org.openremote.container.Container       : >>> Runtime container startup complete
+2024-08-16 18:25:43.933  INFO    [main                          ] org.openremote.container.Container       : Metrics enabled: true
+2024-08-16 18:25:44.007  INFO    [main                          ] org.openremote.container.Container       : >>> Starting runtime container...
+2024-08-16 18:25:44.009  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.syslog.SyslogService
+2024-08-16 18:25:44.010  INFO    [main                          ] .openremote.manager.syslog.SyslogService : Syslog service enabled
+2024-08-16 18:25:44.013  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.persistence.ManagerPersistenceService
+2024-08-16 18:25:44.013  INFO    [main                          ] container.persistence.PersistenceService : Preparing persistence service for database: POSTGRES
+2024-08-16 18:25:44.061  INFO    [main                          ] container.persistence.PersistenceService : Setting storage directory to '/storage'
+2024-08-16 18:25:44.062  INFO    [main                          ] container.persistence.PersistenceService : Opening database connection: jdbc:postgresql://postgresql:5432/openremote?currentSchema=openremote
+2024-08-16 18:25:44.667  WARNING [main                          ] ernal.sqlscript.DefaultSqlScriptExecutor : DB: extension "timescaledb" already exists, skipping (SQL State: 42710 - Error Code: 0)
+2024-08-16 18:25:44.674  WARNING [main                          ] ernal.sqlscript.DefaultSqlScriptExecutor : DB: extension "timescaledb_toolkit" already exists, skipping (SQL State: 42710 - Error Code: 0)
+2024-08-16 18:25:44.675  INFO    [main                          ] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://postgresql:5432/openremote (PostgreSQL 15.1)
+2024-08-16 18:25:44.777  WARNING [main                          ] ernal.sqlscript.DefaultSqlScriptExecutor : DB: extension "timescaledb" already exists, skipping (SQL State: 42710 - Error Code: 0)
+2024-08-16 18:25:44.779  WARNING [main                          ] ernal.sqlscript.DefaultSqlScriptExecutor : DB: extension "timescaledb_toolkit" already exists, skipping (SQL State: 42710 - Error Code: 0)
+2024-08-16 18:25:44.820  WARNING [main                          ] ernal.sqlscript.DefaultSqlScriptExecutor : DB: extension "timescaledb" already exists, skipping (SQL State: 42710 - Error Code: 0)
+2024-08-16 18:25:44.822  WARNING [main                          ] ernal.sqlscript.DefaultSqlScriptExecutor : DB: extension "timescaledb_toolkit" already exists, skipping (SQL State: 42710 - Error Code: 0)
+2024-08-16 18:25:44.865  WARNING [main                          ] ernal.sqlscript.DefaultSqlScriptExecutor : DB: extension "timescaledb" already exists, skipping (SQL State: 42710 - Error Code: 0)
+2024-08-16 18:25:44.867  WARNING [main                          ] ernal.sqlscript.DefaultSqlScriptExecutor : DB: extension "timescaledb_toolkit" already exists, skipping (SQL State: 42710 - Error Code: 0)
+2024-08-16 18:25:44.893  WARNING [main                          ] ernal.sqlscript.DefaultSqlScriptExecutor : DB: extension "timescaledb" already exists, skipping (SQL State: 42710 - Error Code: 0)
+2024-08-16 18:25:44.894  WARNING [main                          ] ernal.sqlscript.DefaultSqlScriptExecutor : DB: extension "timescaledb_toolkit" already exists, skipping (SQL State: 42710 - Error Code: 0)
+2024-08-16 18:25:44.919  INFO    [main                          ] lywaydb.core.internal.command.DbValidate : Successfully validated 10 migrations (execution time 00:00.015s)
+2024-08-16 18:25:44.942  WARNING [main                          ] ernal.sqlscript.DefaultSqlScriptExecutor : DB: extension "timescaledb" already exists, skipping (SQL State: 42710 - Error Code: 0)
+2024-08-16 18:25:44.944  WARNING [main                          ] ernal.sqlscript.DefaultSqlScriptExecutor : DB: extension "timescaledb_toolkit" already exists, skipping (SQL State: 42710 - Error Code: 0)
+2024-08-16 18:25:44.954  INFO    [main                          ] flywaydb.core.internal.command.DbMigrate : Current version of schema "openremote": 20240722.01
+2024-08-16 18:25:44.959  INFO    [main                          ] flywaydb.core.internal.command.DbMigrate : Schema "openremote" is up to date. No migration necessary.
+2024-08-16 18:25:44.964  INFO    [main                          ] container.persistence.PersistenceService : Applied database schema migrations: 0
+2024-08-16 18:25:44.984  WARNING [main                          ] ernal.sqlscript.DefaultSqlScriptExecutor : DB: extension "timescaledb" already exists, skipping (SQL State: 42710 - Error Code: 0)
+2024-08-16 18:25:44.985  WARNING [main                          ] ernal.sqlscript.DefaultSqlScriptExecutor : DB: extension "timescaledb_toolkit" already exists, skipping (SQL State: 42710 - Error Code: 0)
+2024-08-16 18:25:45.013  INFO    [main                          ] lywaydb.core.internal.command.DbValidate : Successfully validated 10 migrations (execution time 00:00.016s)
+2024-08-16 18:25:45.029  WARNING [main                          ] ernal.sqlscript.DefaultSqlScriptExecutor : DB: extension "timescaledb" already exists, skipping (SQL State: 42710 - Error Code: 0)
+2024-08-16 18:25:45.030  WARNING [main                          ] ernal.sqlscript.DefaultSqlScriptExecutor : DB: extension "timescaledb_toolkit" already exists, skipping (SQL State: 42710 - Error Code: 0)
+2024-08-16 18:25:45.036  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.security.ManagerIdentityService
+2024-08-16 18:25:45.037  INFO    [main                          ] .manager.security.ManagerIdentityService : Enabling Keycloak identity provider
+2024-08-16 18:25:45.067  INFO    [main                          ] curity.keycloak.KeycloakIdentityProvider : Keycloak service URL: http://keycloak:8080/auth
+2024-08-16 18:25:45.407  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.asset.AssetModelService
+2024-08-16 18:25:45.411  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.setup.SetupService
+2024-08-16 18:25:45.412  INFO    [main                          ] rg.openremote.manager.setup.SetupService : Setup service disabled, clean install = false
+2024-08-16 18:25:45.412  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.setup.KeycloakInitService
+2024-08-16 18:25:45.442  INFO    [main                          ] remote.manager.setup.KeycloakInitService : Connecting to Keycloak server: http://keycloak:8080/auth
+2024-08-16 18:25:45.668  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.gateway.GatewayService
+2024-08-16 18:25:45.696  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.container.timer.TimerService
+2024-08-16 18:25:45.698  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.asset.AssetStorageService
+2024-08-16 18:25:45.710  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.mqtt.MQTTBrokerService
+2024-08-16 18:25:45.879  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.provisioning.ProvisioningService
+2024-08-16 18:25:45.881  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.datapoint.AssetDatapointService
+2024-08-16 18:25:45.885  INFO    [main                          ] .manager.datapoint.AssetDatapointService : Data point purge interval days = 31
+2024-08-16 18:25:45.885  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.datapoint.AssetPredictedDatapointService
+2024-08-16 18:25:45.887  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.rules.RulesetStorageService
+2024-08-16 18:25:45.888  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.asset.AttributeLinkingService
+2024-08-16 18:25:45.889  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.asset.AssetProcessingService
+2024-08-16 18:25:45.896  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.system.HealthService
+2024-08-16 18:25:45.897  INFO    [main                          ] .openremote.manager.system.HealthService : Health Status Provider: class org.openremote.container.persistence.PersistenceHealthStatusProvider
+2024-08-16 18:25:45.899  INFO    [main                          ] .openremote.manager.system.HealthService : Health Status Provider: class org.openremote.manager.system.JvmHealthStatusProvider
+2024-08-16 18:25:45.900  INFO    [main                          ] .openremote.manager.system.HealthService : Health Status Provider: class org.openremote.manager.system.SslHealthStatusProvider
+2024-08-16 18:25:45.900  INFO    [main                          ] .openremote.manager.system.HealthService : Health Status Provider: class org.openremote.manager.system.SystemHealthStatusProvider
+2024-08-16 18:25:45.902  INFO    [main                          ] .openremote.manager.system.HealthService : Health Status Provider: class org.openremote.manager.rules.RulesHealthStatusProvider
+2024-08-16 18:25:45.903  INFO    [main                          ] .openremote.manager.system.HealthService : Health Status Provider: class org.openremote.manager.agent.AgentHealthStatusProvider
+2024-08-16 18:25:45.903  INFO    [main                          ] .openremote.manager.system.HealthService : Health Status Provider: class org.openremote.manager.datapoint.AssetDatapointHealthStatusProvider
+2024-08-16 18:25:45.904  INFO    [main                          ] .openremote.manager.system.HealthService : Health Status Provider: class org.openremote.manager.datapoint.AssetPredictedDatapointHealthStatusProvider
+2024-08-16 18:25:45.904  INFO    [main                          ] .openremote.manager.system.HealthService : Health Status Provider: class org.openremote.manager.system.CamelHealthStatusProvider
+2024-08-16 18:25:45.908  INFO    [main                          ] .openremote.manager.system.HealthService : Metrics collection enabled
+2024-08-16 18:25:45.943  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.map.MapService
+2024-08-16 18:25:45.944  WARNING [main                          ] org.openremote.manager.map.MapService    : Map tiles data file not found '/deployment.local/mapdata/mapdata.mbtiles', falling back to built in map
+2024-08-16 18:25:45.948  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.notification.NotificationService
+2024-08-16 18:25:45.951  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.webhook.WebhookService
+2024-08-16 18:25:45.952  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.apps.ConsoleAppService
+2024-08-16 18:25:45.980  INFO    [main                          ] org.openremote.container.web.WebService  : Deploying insecure web context: /
+2024-08-16 18:25:46.089  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.notification.PushNotificationHandler
+2024-08-16 18:25:46.095  WARNING [main                          ] ger.notification.PushNotificationHandler : OR_FIREBASE_CONFIG_FILE invalid path or file not readable: /deployment/manager/fcm.json
+2024-08-16 18:25:46.096  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.notification.EmailNotificationHandler
+2024-08-16 18:25:46.097  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.gateway.GatewayClientService
+2024-08-16 18:25:46.102  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.energy.EnergyOptimisationService
+2024-08-16 18:25:46.103  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.energy.ForecastWindService
+2024-08-16 18:25:46.103  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.energy.ForecastSolarService
+2024-08-16 18:25:46.104  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.dashboard.DashboardStorageService
+2024-08-16 18:25:46.107  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.security.AuthorisationService
+2024-08-16 18:25:46.108  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.app.ConfigurationService
+2024-08-16 18:25:46.110  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.asset.ForecastService
+2024-08-16 18:25:46.110  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.event.ClientEventService
+2024-08-16 18:25:46.136  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.rules.RulesService
+2024-08-16 18:25:46.151  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.container.message.MessageBrokerService
+2024-08-16 18:25:46.161  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.agent.AgentService
+2024-08-16 18:25:46.168  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.web.ManagerWebService
+2024-08-16 18:25:46.183  INFO    [main                          ] org.openremote.container.web.WebService  : Building web routing with handler(s): Console app info files
+2024-08-16 18:25:46.214  INFO    [main                          ] emote.container.security.IdentityService : Securing web deployment: /api
+2024-08-16 18:25:46.362  WARN    [Cleaner-0                     ] org.jboss.resteasy.client.jaxrs.i18n     : RESTEASY004687: Closing a class org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$CleanupAction instance for you. Please close clients yourself.
+2024-08-16 18:25:46.637  INFO    [main                          ] org.openremote.container.web.WebService  : Deploying insecure web context: /
+2024-08-16 18:25:46.639  INFO    [main                          ] org.openremote.container.web.WebService  : Deploying insecure web context: /
+2024-08-16 18:25:46.642  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.rules.geofence.ORConsoleGeofenceAssetAdapter
+2024-08-16 18:25:46.645  INFO    [main                          ] te.model.util.ValueUtil.MODEL_AND_VALUES : Initialising asset model...
+2024-08-16 18:25:47.233  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.syslog.SyslogService
+2024-08-16 18:25:47.240  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.persistence.ManagerPersistenceService
+2024-08-16 18:25:50.240  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.security.ManagerIdentityService
+2024-08-16 18:25:50.241  INFO    [main                          ] security.ManagerKeycloakIdentityProvider : Loading OR_KEYCLOAK_GRANT_FILE: /storage/manager/keycloak-credentials.json
+2024-08-16 18:25:50.270  INFO    [main                          ] curity.keycloak.KeycloakIdentityProvider : Found stored credentials so attempting to use them
+2024-08-16 18:25:50.273  INFO    [main                          ] curity.keycloak.KeycloakIdentityProvider : Keycloak proxy URI set to: http://keycloak:8080/auth
+2024-08-16 18:25:50.273  INFO    [main                          ] curity.keycloak.KeycloakIdentityProvider : Validating keycloak credentials
+2024-08-16 18:25:51.374  INFO    [main                          ] curity.keycloak.KeycloakIdentityProvider : Credentials are valid
+2024-08-16 18:25:51.375  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.asset.AssetModelService
+2024-08-16 18:25:51.375  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.setup.SetupService
+2024-08-16 18:25:51.376  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.setup.KeycloakInitService
+2024-08-16 18:25:51.377  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.gateway.GatewayService
+2024-08-16 18:25:51.547  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.container.timer.TimerService
+2024-08-16 18:25:51.548  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.asset.AssetStorageService
+2024-08-16 18:25:51.548  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.mqtt.MQTTBrokerService
+2024-08-16 18:25:51.619  INFO    [main                          ] org.apache.activemq.artemis.core.server  : AMQ221000: Primary message broker is starting with configuration Broker Configuration (clustered=false,journalDirectory=data/journal,bindingsDirectory=data/bindings,largeMessagesDirectory=data/largemessages,pagingDirectory=data/paging)
+2024-08-16 18:25:51.626  INFO    [main                          ] org.apache.activemq.artemis.core.server  : AMQ221045: libaio is not available, switching the configuration into NIO
+2024-08-16 18:25:51.651  INFO    [main                          ] org.apache.activemq.artemis.core.server  : AMQ221057: Global Max Size is being adjusted to 1/2 of the JVM max size (-Xmx). being defined as 1073741824
+2024-08-16 18:25:51.681  INFO    [main                          ] org.apache.activemq.artemis.core.server  : AMQ221043: Protocol module found: [artemis-server]. Adding protocol support for: CORE
+2024-08-16 18:25:51.683  INFO    [main                          ] org.apache.activemq.artemis.core.server  : AMQ221043: Protocol module found: [artemis-mqtt-protocol]. Adding protocol support for: MQTT
+2024-08-16 18:25:51.729  INFO    [main                          ] org.apache.activemq.artemis.core.server  : AMQ224092: Despite disabled persistence, page files will be persisted.
+2024-08-16 18:25:52.129  INFO    [main                          ] org.apache.activemq.artemis.core.server  : AMQ221020: Started EPOLL Acceptor at 0.0.0.0:1883 for protocols [MQTT]
+2024-08-16 18:25:52.130  INFO    [main                          ] org.apache.activemq.artemis.core.server  : AMQ221007: Server is now active
+2024-08-16 18:25:52.130  INFO    [main                          ] org.apache.activemq.artemis.core.server  : AMQ221001: Apache ActiveMQ Artemis Message Broker version 2.35.0 [localhost, nodeID=34175ba3-5bec-11ef-9714-0242ac130004] 
+2024-08-16 18:25:52.228  INFO    [main                          ] mote.manager.mqtt.DefaultMQTTHandler.API : Adding publish consumer for topic '+/+/writeattributevalue/#': handler=DefaultMQTTHandler
+2024-08-16 18:25:52.245  INFO    [main                          ] qtt.UserAssetProvisioningMQTTHandler.API : Adding publish consumer for topic 'provisioning/+/request': handler=UserAssetProvisioningMQTTHandler
+2024-08-16 18:25:52.260  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.provisioning.ProvisioningService
+2024-08-16 18:25:52.260  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.datapoint.AssetDatapointService
+2024-08-16 18:25:52.262  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.datapoint.AssetPredictedDatapointService
+2024-08-16 18:25:52.264  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.rules.RulesetStorageService
+2024-08-16 18:25:52.264  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.asset.AttributeLinkingService
+2024-08-16 18:25:52.265  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.asset.AssetProcessingService
+2024-08-16 18:25:52.266  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.system.HealthService
+2024-08-16 18:25:52.268  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.map.MapService
+2024-08-16 18:25:52.269  INFO    [main                          ] org.openremote.manager.map.MapService    : Starting map service with tile data: /deployment/map/mapdata.mbtiles
+2024-08-16 18:25:52.395  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.notification.NotificationService
+2024-08-16 18:25:52.395  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.webhook.WebhookService
+2024-08-16 18:25:52.396  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.apps.ConsoleAppService
+2024-08-16 18:25:52.397  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.notification.PushNotificationHandler
+2024-08-16 18:25:52.398  WARNING [main                          ] ger.notification.PushNotificationHandler : FCM configuration invalid so cannot start
+2024-08-16 18:25:52.398  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.notification.EmailNotificationHandler
+2024-08-16 18:25:52.399  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.gateway.GatewayClientService
+2024-08-16 18:25:52.817  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.energy.EnergyOptimisationService
+2024-08-16 18:25:52.824  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.energy.ForecastWindService
+2024-08-16 18:25:52.825  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.energy.ForecastSolarService
+2024-08-16 18:25:52.826  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.dashboard.DashboardStorageService
+2024-08-16 18:25:52.826  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.security.AuthorisationService
+2024-08-16 18:25:52.827  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.app.ConfigurationService
+2024-08-16 18:25:52.828  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.asset.ForecastService
+2024-08-16 18:25:52.839  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.event.ClientEventService
+2024-08-16 18:25:52.840  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.rules.RulesService
+2024-08-16 18:25:52.968  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.container.message.MessageBrokerService
+2024-08-16 18:25:52.969  INFO    [main                          ] e.container.message.MessageBrokerService : Starting Camel message broker
+2024-08-16 18:25:53.291  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext : Apache Camel 4.0.4 (camel-1) is starting
+2024-08-16 18:25:54.784  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext : Using ThreadPoolFactory: org.openremote.container.message.MessageBrokerService$1@59a09a27
+2024-08-16 18:25:55.027  INFO    [main                          ] emote.container.security.IdentityService : Securing web deployment: /websocket/events
+2024-08-16 18:25:55.054  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext : Routes startup (started:38)
+2024-08-16 18:25:55.057  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started Persistence-GatewayAsset (seda://PersistenceTopic)
+2024-08-16 18:25:55.058  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started Persistence-Asset (seda://PersistenceTopic)
+2024-08-16 18:25:55.058  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started ClientInbound-Query (seda://ClientInboundQueue)
+2024-08-16 18:25:55.058  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started Persistence-UserAndAssetLink (seda://PersistenceTopic)
+2024-08-16 18:25:55.063  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started ClientOutbound-DefaultMQTTHandler (seda://ClientOutboundQueue)
+2024-08-16 18:25:55.064  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started Persistence-MQTTConnectedAttributes (seda://PersistenceTopic)
+2024-08-16 18:25:55.065  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started Persistence-MonitorProvisioningConfigs (seda://PersistenceTopic)
+2024-08-16 18:25:55.069  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started AttributeEvent-Router (seda://AttributeEventRouter)
+2024-08-16 18:25:55.070  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started AttributeEvent-Processor1 (seda://AttributeEventProcessor1)
+2024-08-16 18:25:55.070  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started AttributeEvent-Processor2 (seda://AttributeEventProcessor2)
+2024-08-16 18:25:55.074  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started AttributeEvent-Processor3 (seda://AttributeEventProcessor3)
+2024-08-16 18:25:55.075  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started AttributeEvent-Processor4 (seda://AttributeEventProcessor4)
+2024-08-16 18:25:55.075  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started AttributeEvent-Processor5 (seda://AttributeEventProcessor5)
+2024-08-16 18:25:55.078  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started AttributeEvent-Processor6 (seda://AttributeEventProcessor6)
+2024-08-16 18:25:55.079  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started AttributeEvent-Processor7 (seda://AttributeEventProcessor7)
+2024-08-16 18:25:55.079  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started AttributeEvent-Processor8 (seda://AttributeEventProcessor8)
+2024-08-16 18:25:55.081  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started AttributeEvent-Processor9 (seda://AttributeEventProcessor9)
+2024-08-16 18:25:55.081  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started AttributeEvent-Processor10 (seda://AttributeEventProcessor10)
+2024-08-16 18:25:55.083  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started AttributeEvent-Processor11 (seda://AttributeEventProcessor11)
+2024-08-16 18:25:55.083  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started AttributeEvent-Processor12 (seda://AttributeEventProcessor12)
+2024-08-16 18:25:55.084  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started AttributeEvent-Processor13 (seda://AttributeEventProcessor13)
+2024-08-16 18:25:55.084  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started AttributeEvent-Processor14 (seda://AttributeEventProcessor14)
+2024-08-16 18:25:55.086  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started AttributeEvent-Processor15 (seda://AttributeEventProcessor15)
+2024-08-16 18:25:55.086  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started AttributeEvent-Processor16 (seda://AttributeEventProcessor16)
+2024-08-16 18:25:55.087  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started NotificationQueue (seda://NotificationQueue)
+2024-08-16 18:25:55.088  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started Persistence-PushNotificationConsoleAsset (seda://PersistenceTopic)
+2024-08-16 18:25:55.090  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started Persistence-GatewayConnection (seda://PersistenceTopic)
+2024-08-16 18:25:55.091  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started ClientInbound-Websocket (ws://0.0.0.0/websocket/events)
+2024-08-16 18:25:55.092  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started ClientInbound-EventProcessor (seda://ClientInboundQueue)
+2024-08-16 18:25:55.092  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started ClientOutbound-Splitter (seda://ClientPublishQueue)
+2024-08-16 18:25:55.092  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started ClientOutbound-Websocket (seda://ClientOutboundQueue)
+2024-08-16 18:25:55.093  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started Persistence-Ruleset (seda://PersistenceTopic)
+2024-08-16 18:25:55.093  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started Persistence-RulesRealm (seda://PersistenceTopic)
+2024-08-16 18:25:55.095  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started Persistence-RulesAsset (seda://PersistenceTopic)
+2024-08-16 18:25:55.096  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started Persistence-GeofenceAdapterConsoleAsset (seda://PersistenceTopic)
+2024-08-16 18:25:55.096  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started Persistence-ProvisioningConfig (seda://PersistenceTopic)
+2024-08-16 18:25:55.097  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started Persistence-EnergyOptimisation (seda://PersistenceTopic)
+2024-08-16 18:25:55.098  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started Persistence-ForecastConfiguration (seda://PersistenceTopic)
+2024-08-16 18:25:55.099  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext : Apache Camel 4.0.4 (camel-1) started in 443ms (build:0ms init:0ms start:443ms)
+2024-08-16 18:25:55.102  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.agent.AgentService
+2024-08-16 18:25:55.130  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.web.ManagerWebService
+2024-08-16 18:25:55.208  INFO    [main                          ] org.jboss.threads                        : JBoss Threads version 3.5.0.Final
+2024-08-16 18:25:55.266  INFO    [main                          ] org.openremote.container.web.WebService  : Webserver ready on http://0.0.0.0:8080
+2024-08-16 18:25:55.266  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.rules.geofence.ORConsoleGeofenceAssetAdapter
+2024-08-16 18:25:55.270  INFO    [main                          ] org.openremote.container.Container       : >>> Runtime container startup complete
+2024-08-16 18:32:41.558  INFO    [main                          ] org.openremote.container.Container       : Metrics enabled: true
+2024-08-16 18:32:41.623  INFO    [main                          ] org.openremote.container.Container       : >>> Starting runtime container...
+2024-08-16 18:32:41.624  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.syslog.SyslogService
+2024-08-16 18:32:41.624  INFO    [main                          ] .openremote.manager.syslog.SyslogService : Syslog service enabled
+2024-08-16 18:32:41.627  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.persistence.ManagerPersistenceService
+2024-08-16 18:32:41.628  INFO    [main                          ] container.persistence.PersistenceService : Preparing persistence service for database: POSTGRES
+2024-08-16 18:32:41.667  INFO    [main                          ] container.persistence.PersistenceService : Setting storage directory to '/storage'
+2024-08-16 18:32:41.669  INFO    [main                          ] container.persistence.PersistenceService : Opening database connection: jdbc:postgresql://postgresql:5432/openremote?currentSchema=openremote
+2024-08-16 18:32:42.190  WARNING [main                          ] ernal.sqlscript.DefaultSqlScriptExecutor : DB: extension "timescaledb" already exists, skipping (SQL State: 42710 - Error Code: 0)
+2024-08-16 18:32:42.196  WARNING [main                          ] ernal.sqlscript.DefaultSqlScriptExecutor : DB: extension "timescaledb_toolkit" already exists, skipping (SQL State: 42710 - Error Code: 0)
+2024-08-16 18:32:42.198  INFO    [main                          ] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://postgresql:5432/openremote (PostgreSQL 15.1)
+2024-08-16 18:32:42.301  WARNING [main                          ] ernal.sqlscript.DefaultSqlScriptExecutor : DB: extension "timescaledb" already exists, skipping (SQL State: 42710 - Error Code: 0)
+2024-08-16 18:32:42.302  WARNING [main                          ] ernal.sqlscript.DefaultSqlScriptExecutor : DB: extension "timescaledb_toolkit" already exists, skipping (SQL State: 42710 - Error Code: 0)
+2024-08-16 18:32:42.334  WARNING [main                          ] ernal.sqlscript.DefaultSqlScriptExecutor : DB: extension "timescaledb" already exists, skipping (SQL State: 42710 - Error Code: 0)
+2024-08-16 18:32:42.336  WARNING [main                          ] ernal.sqlscript.DefaultSqlScriptExecutor : DB: extension "timescaledb_toolkit" already exists, skipping (SQL State: 42710 - Error Code: 0)
+2024-08-16 18:32:42.382  WARNING [main                          ] ernal.sqlscript.DefaultSqlScriptExecutor : DB: extension "timescaledb" already exists, skipping (SQL State: 42710 - Error Code: 0)
+2024-08-16 18:32:42.384  WARNING [main                          ] ernal.sqlscript.DefaultSqlScriptExecutor : DB: extension "timescaledb_toolkit" already exists, skipping (SQL State: 42710 - Error Code: 0)
+2024-08-16 18:32:42.410  WARNING [main                          ] ernal.sqlscript.DefaultSqlScriptExecutor : DB: extension "timescaledb" already exists, skipping (SQL State: 42710 - Error Code: 0)
+2024-08-16 18:32:42.413  WARNING [main                          ] ernal.sqlscript.DefaultSqlScriptExecutor : DB: extension "timescaledb_toolkit" already exists, skipping (SQL State: 42710 - Error Code: 0)
+2024-08-16 18:32:42.447  INFO    [main                          ] lywaydb.core.internal.command.DbValidate : Successfully validated 10 migrations (execution time 00:00.020s)
+2024-08-16 18:32:42.470  WARNING [main                          ] ernal.sqlscript.DefaultSqlScriptExecutor : DB: extension "timescaledb" already exists, skipping (SQL State: 42710 - Error Code: 0)
+2024-08-16 18:32:42.472  WARNING [main                          ] ernal.sqlscript.DefaultSqlScriptExecutor : DB: extension "timescaledb_toolkit" already exists, skipping (SQL State: 42710 - Error Code: 0)
+2024-08-16 18:32:42.484  INFO    [main                          ] flywaydb.core.internal.command.DbMigrate : Current version of schema "openremote": 20240722.01
+2024-08-16 18:32:42.488  INFO    [main                          ] flywaydb.core.internal.command.DbMigrate : Schema "openremote" is up to date. No migration necessary.
+2024-08-16 18:32:42.494  INFO    [main                          ] container.persistence.PersistenceService : Applied database schema migrations: 0
+2024-08-16 18:32:42.517  WARNING [main                          ] ernal.sqlscript.DefaultSqlScriptExecutor : DB: extension "timescaledb" already exists, skipping (SQL State: 42710 - Error Code: 0)
+2024-08-16 18:32:42.519  WARNING [main                          ] ernal.sqlscript.DefaultSqlScriptExecutor : DB: extension "timescaledb_toolkit" already exists, skipping (SQL State: 42710 - Error Code: 0)
+2024-08-16 18:32:42.551  INFO    [main                          ] lywaydb.core.internal.command.DbValidate : Successfully validated 10 migrations (execution time 00:00.023s)
+2024-08-16 18:32:42.568  WARNING [main                          ] ernal.sqlscript.DefaultSqlScriptExecutor : DB: extension "timescaledb" already exists, skipping (SQL State: 42710 - Error Code: 0)
+2024-08-16 18:32:42.569  WARNING [main                          ] ernal.sqlscript.DefaultSqlScriptExecutor : DB: extension "timescaledb_toolkit" already exists, skipping (SQL State: 42710 - Error Code: 0)
+2024-08-16 18:32:42.577  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.security.ManagerIdentityService
+2024-08-16 18:32:42.578  INFO    [main                          ] .manager.security.ManagerIdentityService : Enabling Keycloak identity provider
+2024-08-16 18:32:42.608  INFO    [main                          ] curity.keycloak.KeycloakIdentityProvider : Keycloak service URL: http://keycloak:8080/auth
+2024-08-16 18:32:42.875  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.asset.AssetModelService
+2024-08-16 18:32:42.879  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.setup.SetupService
+2024-08-16 18:32:42.879  INFO    [main                          ] rg.openremote.manager.setup.SetupService : Setup service disabled, clean install = false
+2024-08-16 18:32:42.880  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.setup.KeycloakInitService
+2024-08-16 18:32:42.907  INFO    [main                          ] remote.manager.setup.KeycloakInitService : Connecting to Keycloak server: http://keycloak:8080/auth
+2024-08-16 18:32:43.149  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.gateway.GatewayService
+2024-08-16 18:32:43.177  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.container.timer.TimerService
+2024-08-16 18:32:43.179  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.asset.AssetStorageService
+2024-08-16 18:32:43.189  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.mqtt.MQTTBrokerService
+2024-08-16 18:32:43.333  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.provisioning.ProvisioningService
+2024-08-16 18:32:43.336  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.datapoint.AssetDatapointService
+2024-08-16 18:32:43.338  INFO    [main                          ] .manager.datapoint.AssetDatapointService : Data point purge interval days = 31
+2024-08-16 18:32:43.339  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.datapoint.AssetPredictedDatapointService
+2024-08-16 18:32:43.341  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.rules.RulesetStorageService
+2024-08-16 18:32:43.343  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.asset.AttributeLinkingService
+2024-08-16 18:32:43.344  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.asset.AssetProcessingService
+2024-08-16 18:32:43.357  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.system.HealthService
+2024-08-16 18:32:43.360  INFO    [main                          ] .openremote.manager.system.HealthService : Health Status Provider: class org.openremote.container.persistence.PersistenceHealthStatusProvider
+2024-08-16 18:32:43.362  INFO    [main                          ] .openremote.manager.system.HealthService : Health Status Provider: class org.openremote.manager.system.JvmHealthStatusProvider
+2024-08-16 18:32:43.364  INFO    [main                          ] .openremote.manager.system.HealthService : Health Status Provider: class org.openremote.manager.system.SslHealthStatusProvider
+2024-08-16 18:32:43.365  INFO    [main                          ] .openremote.manager.system.HealthService : Health Status Provider: class org.openremote.manager.system.SystemHealthStatusProvider
+2024-08-16 18:32:43.370  INFO    [main                          ] .openremote.manager.system.HealthService : Health Status Provider: class org.openremote.manager.rules.RulesHealthStatusProvider
+2024-08-16 18:32:43.375  INFO    [main                          ] .openremote.manager.system.HealthService : Health Status Provider: class org.openremote.manager.agent.AgentHealthStatusProvider
+2024-08-16 18:32:43.376  INFO    [main                          ] .openremote.manager.system.HealthService : Health Status Provider: class org.openremote.manager.datapoint.AssetDatapointHealthStatusProvider
+2024-08-16 18:32:43.377  INFO    [main                          ] .openremote.manager.system.HealthService : Health Status Provider: class org.openremote.manager.datapoint.AssetPredictedDatapointHealthStatusProvider
+2024-08-16 18:32:43.378  INFO    [main                          ] .openremote.manager.system.HealthService : Health Status Provider: class org.openremote.manager.system.CamelHealthStatusProvider
+2024-08-16 18:32:43.382  INFO    [main                          ] .openremote.manager.system.HealthService : Metrics collection enabled
+2024-08-16 18:32:43.400  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.map.MapService
+2024-08-16 18:32:43.402  WARNING [main                          ] org.openremote.manager.map.MapService    : Map tiles data file not found '/deployment.local/mapdata/mapdata.mbtiles', falling back to built in map
+2024-08-16 18:32:43.406  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.notification.NotificationService
+2024-08-16 18:32:43.410  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.webhook.WebhookService
+2024-08-16 18:32:43.411  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.apps.ConsoleAppService
+2024-08-16 18:32:43.428  INFO    [main                          ] org.openremote.container.web.WebService  : Deploying insecure web context: /
+2024-08-16 18:32:43.504  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.notification.PushNotificationHandler
+2024-08-16 18:32:43.506  WARNING [main                          ] ger.notification.PushNotificationHandler : OR_FIREBASE_CONFIG_FILE invalid path or file not readable: /deployment/manager/fcm.json
+2024-08-16 18:32:43.506  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.notification.EmailNotificationHandler
+2024-08-16 18:32:43.507  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.gateway.GatewayClientService
+2024-08-16 18:32:43.510  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.energy.EnergyOptimisationService
+2024-08-16 18:32:43.511  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.energy.ForecastWindService
+2024-08-16 18:32:43.511  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.energy.ForecastSolarService
+2024-08-16 18:32:43.512  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.dashboard.DashboardStorageService
+2024-08-16 18:32:43.513  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.security.AuthorisationService
+2024-08-16 18:32:43.514  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.app.ConfigurationService
+2024-08-16 18:32:43.516  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.asset.ForecastService
+2024-08-16 18:32:43.517  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.event.ClientEventService
+2024-08-16 18:32:43.546  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.rules.RulesService
+2024-08-16 18:32:43.563  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.container.message.MessageBrokerService
+2024-08-16 18:32:43.575  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.agent.AgentService
+2024-08-16 18:32:43.586  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.web.ManagerWebService
+2024-08-16 18:32:43.598  INFO    [main                          ] org.openremote.container.web.WebService  : Building web routing with handler(s): Console app info files
+2024-08-16 18:32:43.623  INFO    [main                          ] emote.container.security.IdentityService : Securing web deployment: /api
+2024-08-16 18:32:44.006  INFO    [main                          ] org.openremote.container.web.WebService  : Deploying insecure web context: /
+2024-08-16 18:32:44.008  INFO    [main                          ] org.openremote.container.web.WebService  : Deploying insecure web context: /
+2024-08-16 18:32:44.012  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.rules.geofence.ORConsoleGeofenceAssetAdapter
+2024-08-16 18:32:44.016  INFO    [main                          ] te.model.util.ValueUtil.MODEL_AND_VALUES : Initialising asset model...
+2024-08-16 18:32:44.462  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.syslog.SyslogService
+2024-08-16 18:32:44.464  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.persistence.ManagerPersistenceService
+2024-08-16 18:32:45.429  WARN    [Cleaner-0                     ] org.jboss.resteasy.client.jaxrs.i18n     : RESTEASY004687: Closing a class org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$CleanupAction instance for you. Please close clients yourself.
+2024-08-16 18:32:47.211  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.security.ManagerIdentityService
+2024-08-16 18:32:47.212  INFO    [main                          ] security.ManagerKeycloakIdentityProvider : Loading OR_KEYCLOAK_GRANT_FILE: /storage/manager/keycloak-credentials.json
+2024-08-16 18:32:47.238  INFO    [main                          ] curity.keycloak.KeycloakIdentityProvider : Found stored credentials so attempting to use them
+2024-08-16 18:32:47.240  INFO    [main                          ] curity.keycloak.KeycloakIdentityProvider : Keycloak proxy URI set to: http://keycloak:8080/auth
+2024-08-16 18:32:47.241  INFO    [main                          ] curity.keycloak.KeycloakIdentityProvider : Validating keycloak credentials
+2024-08-16 18:32:48.196  INFO    [main                          ] curity.keycloak.KeycloakIdentityProvider : Credentials are valid
+2024-08-16 18:32:48.196  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.asset.AssetModelService
+2024-08-16 18:32:48.198  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.setup.SetupService
+2024-08-16 18:32:48.199  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.setup.KeycloakInitService
+2024-08-16 18:32:48.199  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.gateway.GatewayService
+2024-08-16 18:32:48.329  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.container.timer.TimerService
+2024-08-16 18:32:48.329  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.asset.AssetStorageService
+2024-08-16 18:32:48.330  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.mqtt.MQTTBrokerService
+2024-08-16 18:32:48.386  INFO    [main                          ] org.apache.activemq.artemis.core.server  : AMQ221000: Primary message broker is starting with configuration Broker Configuration (clustered=false,journalDirectory=data/journal,bindingsDirectory=data/bindings,largeMessagesDirectory=data/largemessages,pagingDirectory=data/paging)
+2024-08-16 18:32:48.393  INFO    [main                          ] org.apache.activemq.artemis.core.server  : AMQ221045: libaio is not available, switching the configuration into NIO
+2024-08-16 18:32:48.407  INFO    [main                          ] org.apache.activemq.artemis.core.server  : AMQ221057: Global Max Size is being adjusted to 1/2 of the JVM max size (-Xmx). being defined as 1073741824
+2024-08-16 18:32:48.444  INFO    [main                          ] org.apache.activemq.artemis.core.server  : AMQ221043: Protocol module found: [artemis-server]. Adding protocol support for: CORE
+2024-08-16 18:32:48.446  INFO    [main                          ] org.apache.activemq.artemis.core.server  : AMQ221043: Protocol module found: [artemis-mqtt-protocol]. Adding protocol support for: MQTT
+2024-08-16 18:32:48.484  INFO    [main                          ] org.apache.activemq.artemis.core.server  : AMQ224092: Despite disabled persistence, page files will be persisted.
+2024-08-16 18:32:48.747  INFO    [main                          ] org.apache.activemq.artemis.core.server  : AMQ221020: Started EPOLL Acceptor at 0.0.0.0:1883 for protocols [MQTT]
+2024-08-16 18:32:48.748  INFO    [main                          ] org.apache.activemq.artemis.core.server  : AMQ221007: Server is now active
+2024-08-16 18:32:48.748  INFO    [main                          ] org.apache.activemq.artemis.core.server  : AMQ221001: Apache ActiveMQ Artemis Message Broker version 2.35.0 [localhost, nodeID=2c7eaa57-5bed-11ef-a096-0242ac130004] 
+2024-08-16 18:32:48.840  INFO    [main                          ] mote.manager.mqtt.DefaultMQTTHandler.API : Adding publish consumer for topic '+/+/writeattributevalue/#': handler=DefaultMQTTHandler
+2024-08-16 18:32:48.857  INFO    [main                          ] qtt.UserAssetProvisioningMQTTHandler.API : Adding publish consumer for topic 'provisioning/+/request': handler=UserAssetProvisioningMQTTHandler
+2024-08-16 18:32:48.873  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.provisioning.ProvisioningService
+2024-08-16 18:32:48.873  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.datapoint.AssetDatapointService
+2024-08-16 18:32:48.875  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.datapoint.AssetPredictedDatapointService
+2024-08-16 18:32:48.877  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.rules.RulesetStorageService
+2024-08-16 18:32:48.878  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.asset.AttributeLinkingService
+2024-08-16 18:32:48.878  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.asset.AssetProcessingService
+2024-08-16 18:32:48.879  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.system.HealthService
+2024-08-16 18:32:48.882  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.map.MapService
+2024-08-16 18:32:48.882  INFO    [main                          ] org.openremote.manager.map.MapService    : Starting map service with tile data: /deployment/map/mapdata.mbtiles
+2024-08-16 18:32:48.998  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.notification.NotificationService
+2024-08-16 18:32:48.999  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.webhook.WebhookService
+2024-08-16 18:32:49.000  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.apps.ConsoleAppService
+2024-08-16 18:32:49.001  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.notification.PushNotificationHandler
+2024-08-16 18:32:49.001  WARNING [main                          ] ger.notification.PushNotificationHandler : FCM configuration invalid so cannot start
+2024-08-16 18:32:49.002  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.notification.EmailNotificationHandler
+2024-08-16 18:32:49.003  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.gateway.GatewayClientService
+2024-08-16 18:32:49.192  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.energy.EnergyOptimisationService
+2024-08-16 18:32:49.197  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.energy.ForecastWindService
+2024-08-16 18:32:49.198  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.energy.ForecastSolarService
+2024-08-16 18:32:49.198  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.dashboard.DashboardStorageService
+2024-08-16 18:32:49.199  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.security.AuthorisationService
+2024-08-16 18:32:49.199  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.app.ConfigurationService
+2024-08-16 18:32:49.199  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.asset.ForecastService
+2024-08-16 18:32:49.207  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.event.ClientEventService
+2024-08-16 18:32:49.208  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.rules.RulesService
+2024-08-16 18:32:49.334  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.container.message.MessageBrokerService
+2024-08-16 18:32:49.336  INFO    [main                          ] e.container.message.MessageBrokerService : Starting Camel message broker
+2024-08-16 18:32:49.614  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext : Apache Camel 4.0.4 (camel-1) is starting
+2024-08-16 18:32:49.746  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext : Using ThreadPoolFactory: org.openremote.container.message.MessageBrokerService$1@59a09a27
+2024-08-16 18:32:49.959  INFO    [main                          ] emote.container.security.IdentityService : Securing web deployment: /websocket/events
+2024-08-16 18:32:49.982  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext : Routes startup (started:38)
+2024-08-16 18:32:49.983  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started Persistence-GatewayAsset (seda://PersistenceTopic)
+2024-08-16 18:32:49.984  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started Persistence-Asset (seda://PersistenceTopic)
+2024-08-16 18:32:49.984  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started ClientInbound-Query (seda://ClientInboundQueue)
+2024-08-16 18:32:49.985  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started Persistence-UserAndAssetLink (seda://PersistenceTopic)
+2024-08-16 18:32:49.986  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started ClientOutbound-DefaultMQTTHandler (seda://ClientOutboundQueue)
+2024-08-16 18:32:49.987  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started Persistence-MQTTConnectedAttributes (seda://PersistenceTopic)
+2024-08-16 18:32:49.987  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started Persistence-MonitorProvisioningConfigs (seda://PersistenceTopic)
+2024-08-16 18:32:49.988  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started AttributeEvent-Router (seda://AttributeEventRouter)
+2024-08-16 18:32:49.989  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started AttributeEvent-Processor1 (seda://AttributeEventProcessor1)
+2024-08-16 18:32:49.989  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started AttributeEvent-Processor2 (seda://AttributeEventProcessor2)
+2024-08-16 18:32:49.990  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started AttributeEvent-Processor3 (seda://AttributeEventProcessor3)
+2024-08-16 18:32:49.990  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started AttributeEvent-Processor4 (seda://AttributeEventProcessor4)
+2024-08-16 18:32:49.991  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started AttributeEvent-Processor5 (seda://AttributeEventProcessor5)
+2024-08-16 18:32:49.991  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started AttributeEvent-Processor6 (seda://AttributeEventProcessor6)
+2024-08-16 18:32:49.991  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started AttributeEvent-Processor7 (seda://AttributeEventProcessor7)
+2024-08-16 18:32:49.992  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started AttributeEvent-Processor8 (seda://AttributeEventProcessor8)
+2024-08-16 18:32:49.992  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started AttributeEvent-Processor9 (seda://AttributeEventProcessor9)
+2024-08-16 18:32:49.993  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started AttributeEvent-Processor10 (seda://AttributeEventProcessor10)
+2024-08-16 18:32:49.993  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started AttributeEvent-Processor11 (seda://AttributeEventProcessor11)
+2024-08-16 18:32:49.994  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started AttributeEvent-Processor12 (seda://AttributeEventProcessor12)
+2024-08-16 18:32:49.994  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started AttributeEvent-Processor13 (seda://AttributeEventProcessor13)
+2024-08-16 18:32:49.995  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started AttributeEvent-Processor14 (seda://AttributeEventProcessor14)
+2024-08-16 18:32:49.995  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started AttributeEvent-Processor15 (seda://AttributeEventProcessor15)
+2024-08-16 18:32:49.995  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started AttributeEvent-Processor16 (seda://AttributeEventProcessor16)
+2024-08-16 18:32:49.996  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started NotificationQueue (seda://NotificationQueue)
+2024-08-16 18:32:49.996  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started Persistence-PushNotificationConsoleAsset (seda://PersistenceTopic)
+2024-08-16 18:32:49.997  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started Persistence-GatewayConnection (seda://PersistenceTopic)
+2024-08-16 18:32:49.997  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started ClientInbound-Websocket (ws://0.0.0.0/websocket/events)
+2024-08-16 18:32:49.998  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started ClientInbound-EventProcessor (seda://ClientInboundQueue)
+2024-08-16 18:32:49.998  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started ClientOutbound-Splitter (seda://ClientPublishQueue)
+2024-08-16 18:32:49.999  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started ClientOutbound-Websocket (seda://ClientOutboundQueue)
+2024-08-16 18:32:49.999  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started Persistence-Ruleset (seda://PersistenceTopic)
+2024-08-16 18:32:50.000  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started Persistence-RulesRealm (seda://PersistenceTopic)
+2024-08-16 18:32:50.000  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started Persistence-RulesAsset (seda://PersistenceTopic)
+2024-08-16 18:32:50.000  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started Persistence-GeofenceAdapterConsoleAsset (seda://PersistenceTopic)
+2024-08-16 18:32:50.001  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started Persistence-ProvisioningConfig (seda://PersistenceTopic)
+2024-08-16 18:32:50.001  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started Persistence-EnergyOptimisation (seda://PersistenceTopic)
+2024-08-16 18:32:50.002  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started Persistence-ForecastConfiguration (seda://PersistenceTopic)
+2024-08-16 18:32:50.002  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext : Apache Camel 4.0.4 (camel-1) started in 387ms (build:0ms init:0ms start:387ms)
+2024-08-16 18:32:50.004  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.agent.AgentService
+2024-08-16 18:32:50.021  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.web.ManagerWebService
+2024-08-16 18:32:50.069  INFO    [main                          ] org.jboss.threads                        : JBoss Threads version 3.5.0.Final
+2024-08-16 18:32:50.112  INFO    [main                          ] org.openremote.container.web.WebService  : Webserver ready on http://0.0.0.0:8080
+2024-08-16 18:32:50.113  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.rules.geofence.ORConsoleGeofenceAssetAdapter
+2024-08-16 18:32:50.116  INFO    [main                          ] org.openremote.container.Container       : >>> Runtime container startup complete
+2024-08-17 04:57:46.288  INFO    [main                          ] org.openremote.container.Container       : Metrics enabled: true
+2024-08-17 04:57:46.369  INFO    [main                          ] org.openremote.container.Container       : >>> Starting runtime container...
+2024-08-17 04:57:46.371  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.syslog.SyslogService
+2024-08-17 04:57:46.371  INFO    [main                          ] .openremote.manager.syslog.SyslogService : Syslog service enabled
+2024-08-17 04:57:46.375  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.persistence.ManagerPersistenceService
+2024-08-17 04:57:46.375  INFO    [main                          ] container.persistence.PersistenceService : Preparing persistence service for database: POSTGRES
+2024-08-17 04:57:46.424  INFO    [main                          ] container.persistence.PersistenceService : Setting storage directory to '/storage'
+2024-08-17 04:57:46.426  INFO    [main                          ] container.persistence.PersistenceService : Opening database connection: jdbc:postgresql://postgresql:5432/openremote?currentSchema=openremote
+2024-08-17 04:57:47.415  WARNING [main                          ] ernal.sqlscript.DefaultSqlScriptExecutor : DB: extension "timescaledb" already exists, skipping (SQL State: 42710 - Error Code: 0)
+2024-08-17 04:57:47.421  WARNING [main                          ] ernal.sqlscript.DefaultSqlScriptExecutor : DB: extension "timescaledb_toolkit" already exists, skipping (SQL State: 42710 - Error Code: 0)
+2024-08-17 04:57:47.423  INFO    [main                          ] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://postgresql:5432/openremote (PostgreSQL 15.1)
+2024-08-17 04:57:47.565  WARNING [main                          ] ernal.sqlscript.DefaultSqlScriptExecutor : DB: extension "timescaledb" already exists, skipping (SQL State: 42710 - Error Code: 0)
+2024-08-17 04:57:47.568  WARNING [main                          ] ernal.sqlscript.DefaultSqlScriptExecutor : DB: extension "timescaledb_toolkit" already exists, skipping (SQL State: 42710 - Error Code: 0)
+2024-08-17 04:57:47.621  WARNING [main                          ] ernal.sqlscript.DefaultSqlScriptExecutor : DB: extension "timescaledb" already exists, skipping (SQL State: 42710 - Error Code: 0)
+2024-08-17 04:57:47.626  WARNING [main                          ] ernal.sqlscript.DefaultSqlScriptExecutor : DB: extension "timescaledb_toolkit" already exists, skipping (SQL State: 42710 - Error Code: 0)
+2024-08-17 04:57:47.697  WARNING [main                          ] ernal.sqlscript.DefaultSqlScriptExecutor : DB: extension "timescaledb" already exists, skipping (SQL State: 42710 - Error Code: 0)
+2024-08-17 04:57:47.704  WARNING [main                          ] ernal.sqlscript.DefaultSqlScriptExecutor : DB: extension "timescaledb_toolkit" already exists, skipping (SQL State: 42710 - Error Code: 0)
+2024-08-17 04:57:47.773  WARNING [main                          ] ernal.sqlscript.DefaultSqlScriptExecutor : DB: extension "timescaledb" already exists, skipping (SQL State: 42710 - Error Code: 0)
+2024-08-17 04:57:47.780  WARNING [main                          ] ernal.sqlscript.DefaultSqlScriptExecutor : DB: extension "timescaledb_toolkit" already exists, skipping (SQL State: 42710 - Error Code: 0)
+2024-08-17 04:57:47.853  INFO    [main                          ] lywaydb.core.internal.command.DbValidate : Successfully validated 10 migrations (execution time 00:00.046s)
+2024-08-17 04:57:47.898  WARNING [main                          ] ernal.sqlscript.DefaultSqlScriptExecutor : DB: extension "timescaledb" already exists, skipping (SQL State: 42710 - Error Code: 0)
+2024-08-17 04:57:47.901  WARNING [main                          ] ernal.sqlscript.DefaultSqlScriptExecutor : DB: extension "timescaledb_toolkit" already exists, skipping (SQL State: 42710 - Error Code: 0)
+2024-08-17 04:57:47.978  INFO    [main                          ] flywaydb.core.internal.command.DbMigrate : Current version of schema "openremote": 20240722.01
+2024-08-17 04:57:48.001  INFO    [main                          ] flywaydb.core.internal.command.DbMigrate : Schema "openremote" is up to date. No migration necessary.
+2024-08-17 04:57:48.029  INFO    [main                          ] container.persistence.PersistenceService : Applied database schema migrations: 0
+2024-08-17 04:57:48.075  WARNING [main                          ] ernal.sqlscript.DefaultSqlScriptExecutor : DB: extension "timescaledb" already exists, skipping (SQL State: 42710 - Error Code: 0)
+2024-08-17 04:57:48.078  WARNING [main                          ] ernal.sqlscript.DefaultSqlScriptExecutor : DB: extension "timescaledb_toolkit" already exists, skipping (SQL State: 42710 - Error Code: 0)
+2024-08-17 04:57:48.100  INFO    [main                          ] lywaydb.core.internal.command.DbValidate : Successfully validated 10 migrations (execution time 00:00.012s)
+2024-08-17 04:57:48.113  WARNING [main                          ] ernal.sqlscript.DefaultSqlScriptExecutor : DB: extension "timescaledb" already exists, skipping (SQL State: 42710 - Error Code: 0)
+2024-08-17 04:57:48.114  WARNING [main                          ] ernal.sqlscript.DefaultSqlScriptExecutor : DB: extension "timescaledb_toolkit" already exists, skipping (SQL State: 42710 - Error Code: 0)
+2024-08-17 04:57:48.122  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.security.ManagerIdentityService
+2024-08-17 04:57:48.127  INFO    [main                          ] .manager.security.ManagerIdentityService : Enabling Keycloak identity provider
+2024-08-17 04:57:48.161  INFO    [main                          ] curity.keycloak.KeycloakIdentityProvider : Keycloak service URL: http://keycloak:8080/auth
+2024-08-17 04:57:48.632  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.asset.AssetModelService
+2024-08-17 04:57:48.641  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.setup.SetupService
+2024-08-17 04:57:48.642  INFO    [main                          ] rg.openremote.manager.setup.SetupService : Setup service disabled, clean install = false
+2024-08-17 04:57:48.642  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.setup.KeycloakInitService
+2024-08-17 04:57:48.682  INFO    [main                          ] remote.manager.setup.KeycloakInitService : Connecting to Keycloak server: http://keycloak:8080/auth
+2024-08-17 04:57:48.990  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.gateway.GatewayService
+2024-08-17 04:57:49.021  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.container.timer.TimerService
+2024-08-17 04:57:49.022  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.asset.AssetStorageService
+2024-08-17 04:57:49.034  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.mqtt.MQTTBrokerService
+2024-08-17 04:57:49.287  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.provisioning.ProvisioningService
+2024-08-17 04:57:49.293  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.datapoint.AssetDatapointService
+2024-08-17 04:57:49.300  INFO    [main                          ] .manager.datapoint.AssetDatapointService : Data point purge interval days = 31
+2024-08-17 04:57:49.301  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.datapoint.AssetPredictedDatapointService
+2024-08-17 04:57:49.303  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.rules.RulesetStorageService
+2024-08-17 04:57:49.308  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.asset.AttributeLinkingService
+2024-08-17 04:57:49.310  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.asset.AssetProcessingService
+2024-08-17 04:57:49.317  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.system.HealthService
+2024-08-17 04:57:49.320  INFO    [main                          ] .openremote.manager.system.HealthService : Health Status Provider: class org.openremote.manager.system.JvmHealthStatusProvider
+2024-08-17 04:57:49.321  INFO    [main                          ] .openremote.manager.system.HealthService : Health Status Provider: class org.openremote.manager.system.SslHealthStatusProvider
+2024-08-17 04:57:49.324  INFO    [main                          ] .openremote.manager.system.HealthService : Health Status Provider: class org.openremote.manager.system.SystemHealthStatusProvider
+2024-08-17 04:57:49.327  INFO    [main                          ] .openremote.manager.system.HealthService : Health Status Provider: class org.openremote.manager.rules.RulesHealthStatusProvider
+2024-08-17 04:57:49.330  INFO    [main                          ] .openremote.manager.system.HealthService : Health Status Provider: class org.openremote.manager.agent.AgentHealthStatusProvider
+2024-08-17 04:57:49.332  INFO    [main                          ] .openremote.manager.system.HealthService : Health Status Provider: class org.openremote.manager.datapoint.AssetDatapointHealthStatusProvider
+2024-08-17 04:57:49.333  INFO    [main                          ] .openremote.manager.system.HealthService : Health Status Provider: class org.openremote.manager.datapoint.AssetPredictedDatapointHealthStatusProvider
+2024-08-17 04:57:49.335  INFO    [main                          ] .openremote.manager.system.HealthService : Health Status Provider: class org.openremote.manager.system.CamelHealthStatusProvider
+2024-08-17 04:57:49.343  INFO    [main                          ] .openremote.manager.system.HealthService : Health Status Provider: class org.openremote.container.persistence.PersistenceHealthStatusProvider
+2024-08-17 04:57:49.351  INFO    [main                          ] .openremote.manager.system.HealthService : Metrics collection enabled
+2024-08-17 04:57:49.379  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.map.MapService
+2024-08-17 04:57:49.381  WARNING [main                          ] org.openremote.manager.map.MapService    : Map tiles data file not found '/deployment.local/mapdata/mapdata.mbtiles', falling back to built in map
+2024-08-17 04:57:49.386  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.notification.NotificationService
+2024-08-17 04:57:49.392  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.webhook.WebhookService
+2024-08-17 04:57:49.393  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.apps.ConsoleAppService
+2024-08-17 04:57:49.438  INFO    [main                          ] org.openremote.container.web.WebService  : Deploying insecure web context: /
+2024-08-17 04:57:49.618  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.notification.PushNotificationHandler
+2024-08-17 04:57:49.620  WARNING [main                          ] ger.notification.PushNotificationHandler : OR_FIREBASE_CONFIG_FILE invalid path or file not readable: /deployment/manager/fcm.json
+2024-08-17 04:57:49.620  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.notification.EmailNotificationHandler
+2024-08-17 04:57:49.621  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.gateway.GatewayClientService
+2024-08-17 04:57:49.623  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.energy.EnergyOptimisationService
+2024-08-17 04:57:49.624  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.energy.ForecastWindService
+2024-08-17 04:57:49.625  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.energy.ForecastSolarService
+2024-08-17 04:57:49.625  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.dashboard.DashboardStorageService
+2024-08-17 04:57:49.627  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.security.AuthorisationService
+2024-08-17 04:57:49.627  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.app.ConfigurationService
+2024-08-17 04:57:49.628  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.asset.ForecastService
+2024-08-17 04:57:49.629  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.event.ClientEventService
+2024-08-17 04:57:49.659  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.rules.RulesService
+2024-08-17 04:57:49.675  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.container.message.MessageBrokerService
+2024-08-17 04:57:49.700  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.agent.AgentService
+2024-08-17 04:57:49.710  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.web.ManagerWebService
+2024-08-17 04:57:49.733  INFO    [main                          ] org.openremote.container.web.WebService  : Building web routing with handler(s): Console app info files
+2024-08-17 04:57:49.782  INFO    [main                          ] emote.container.security.IdentityService : Securing web deployment: /api
+2024-08-17 04:57:49.979  WARN    [Cleaner-0                     ] org.jboss.resteasy.client.jaxrs.i18n     : RESTEASY004687: Closing a class org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$CleanupAction instance for you. Please close clients yourself.
+2024-08-17 04:57:50.259  INFO    [main                          ] org.openremote.container.web.WebService  : Deploying insecure web context: /
+2024-08-17 04:57:50.263  INFO    [main                          ] org.openremote.container.web.WebService  : Deploying insecure web context: /
+2024-08-17 04:57:50.266  INFO    [main                          ] org.openremote.container.Container       : Initializing service: org.openremote.manager.rules.geofence.ORConsoleGeofenceAssetAdapter
+2024-08-17 04:57:50.271  INFO    [main                          ] te.model.util.ValueUtil.MODEL_AND_VALUES : Initialising asset model...
+2024-08-17 04:57:51.027  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.syslog.SyslogService
+2024-08-17 04:57:51.030  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.persistence.ManagerPersistenceService
+2024-08-17 04:57:54.667  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.security.ManagerIdentityService
+2024-08-17 04:57:54.669  INFO    [main                          ] security.ManagerKeycloakIdentityProvider : Loading OR_KEYCLOAK_GRANT_FILE: /storage/manager/keycloak-credentials.json
+2024-08-17 04:57:54.725  INFO    [main                          ] curity.keycloak.KeycloakIdentityProvider : Found stored credentials so attempting to use them
+2024-08-17 04:57:54.732  INFO    [main                          ] curity.keycloak.KeycloakIdentityProvider : Keycloak proxy URI set to: http://keycloak:8080/auth
+2024-08-17 04:57:54.733  INFO    [main                          ] curity.keycloak.KeycloakIdentityProvider : Validating keycloak credentials
+2024-08-17 04:57:55.851  INFO    [main                          ] curity.keycloak.KeycloakIdentityProvider : Credentials are valid
+2024-08-17 04:57:55.852  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.asset.AssetModelService
+2024-08-17 04:57:55.853  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.setup.SetupService
+2024-08-17 04:57:55.854  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.setup.KeycloakInitService
+2024-08-17 04:57:55.854  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.gateway.GatewayService
+2024-08-17 04:57:55.990  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.container.timer.TimerService
+2024-08-17 04:57:55.992  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.asset.AssetStorageService
+2024-08-17 04:57:55.992  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.mqtt.MQTTBrokerService
+2024-08-17 04:57:56.073  INFO    [main                          ] org.apache.activemq.artemis.core.server  : AMQ221000: Primary message broker is starting with configuration Broker Configuration (clustered=false,journalDirectory=data/journal,bindingsDirectory=data/bindings,largeMessagesDirectory=data/largemessages,pagingDirectory=data/paging)
+2024-08-17 04:57:56.080  INFO    [main                          ] org.apache.activemq.artemis.core.server  : AMQ221045: libaio is not available, switching the configuration into NIO
+2024-08-17 04:57:56.098  INFO    [main                          ] org.apache.activemq.artemis.core.server  : AMQ221057: Global Max Size is being adjusted to 1/2 of the JVM max size (-Xmx). being defined as 1073741824
+2024-08-17 04:57:56.130  INFO    [main                          ] org.apache.activemq.artemis.core.server  : AMQ221043: Protocol module found: [artemis-server]. Adding protocol support for: CORE
+2024-08-17 04:57:56.132  INFO    [main                          ] org.apache.activemq.artemis.core.server  : AMQ221043: Protocol module found: [artemis-mqtt-protocol]. Adding protocol support for: MQTT
+2024-08-17 04:57:56.164  INFO    [main                          ] org.apache.activemq.artemis.core.server  : AMQ224092: Despite disabled persistence, page files will be persisted.
+2024-08-17 04:57:56.419  INFO    [main                          ] org.apache.activemq.artemis.core.server  : AMQ221020: Started EPOLL Acceptor at 0.0.0.0:1883 for protocols [MQTT]
+2024-08-17 04:57:56.420  INFO    [main                          ] org.apache.activemq.artemis.core.server  : AMQ221007: Server is now active
+2024-08-17 04:57:56.420  INFO    [main                          ] org.apache.activemq.artemis.core.server  : AMQ221001: Apache ActiveMQ Artemis Message Broker version 2.35.0 [localhost, nodeID=80d3cb9d-5c44-11ef-8961-0242ac120004] 
+2024-08-17 04:57:56.559  INFO    [main                          ] mote.manager.mqtt.DefaultMQTTHandler.API : Adding publish consumer for topic '+/+/writeattributevalue/#': handler=DefaultMQTTHandler
+2024-08-17 04:57:56.592  INFO    [main                          ] qtt.UserAssetProvisioningMQTTHandler.API : Adding publish consumer for topic 'provisioning/+/request': handler=UserAssetProvisioningMQTTHandler
+2024-08-17 04:57:56.604  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.provisioning.ProvisioningService
+2024-08-17 04:57:56.605  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.datapoint.AssetDatapointService
+2024-08-17 04:57:56.610  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.datapoint.AssetPredictedDatapointService
+2024-08-17 04:57:56.611  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.rules.RulesetStorageService
+2024-08-17 04:57:56.613  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.asset.AttributeLinkingService
+2024-08-17 04:57:56.614  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.asset.AssetProcessingService
+2024-08-17 04:57:56.614  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.system.HealthService
+2024-08-17 04:57:56.615  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.map.MapService
+2024-08-17 04:57:56.617  INFO    [main                          ] org.openremote.manager.map.MapService    : Starting map service with tile data: /deployment/map/mapdata.mbtiles
+2024-08-17 04:57:56.841  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.notification.NotificationService
+2024-08-17 04:57:56.842  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.webhook.WebhookService
+2024-08-17 04:57:56.842  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.apps.ConsoleAppService
+2024-08-17 04:57:56.843  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.notification.PushNotificationHandler
+2024-08-17 04:57:56.843  WARNING [main                          ] ger.notification.PushNotificationHandler : FCM configuration invalid so cannot start
+2024-08-17 04:57:56.844  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.notification.EmailNotificationHandler
+2024-08-17 04:57:56.845  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.gateway.GatewayClientService
+2024-08-17 04:57:57.085  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.energy.EnergyOptimisationService
+2024-08-17 04:57:57.093  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.energy.ForecastWindService
+2024-08-17 04:57:57.094  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.energy.ForecastSolarService
+2024-08-17 04:57:57.096  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.dashboard.DashboardStorageService
+2024-08-17 04:57:57.097  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.security.AuthorisationService
+2024-08-17 04:57:57.098  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.app.ConfigurationService
+2024-08-17 04:57:57.099  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.asset.ForecastService
+2024-08-17 04:57:57.106  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.event.ClientEventService
+2024-08-17 04:57:57.107  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.rules.RulesService
+2024-08-17 04:57:57.270  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.container.message.MessageBrokerService
+2024-08-17 04:57:57.271  INFO    [main                          ] e.container.message.MessageBrokerService : Starting Camel message broker
+2024-08-17 04:57:57.783  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext : Apache Camel 4.0.4 (camel-1) is starting
+2024-08-17 04:57:57.940  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext : Using ThreadPoolFactory: org.openremote.container.message.MessageBrokerService$1@7c3aecdc
+2024-08-17 04:57:58.212  INFO    [main                          ] emote.container.security.IdentityService : Securing web deployment: /websocket/events
+2024-08-17 04:57:58.240  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext : Routes startup (started:34)
+2024-08-17 04:57:58.241  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started Persistence-GatewayAsset (seda://PersistenceTopic)
+2024-08-17 04:57:58.242  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started Persistence-Asset (seda://PersistenceTopic)
+2024-08-17 04:57:58.243  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started ClientInbound-Query (seda://ClientInboundQueue)
+2024-08-17 04:57:58.243  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started Persistence-UserAndAssetLink (seda://PersistenceTopic)
+2024-08-17 04:57:58.244  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started ClientOutbound-DefaultMQTTHandler (seda://ClientOutboundQueue)
+2024-08-17 04:57:58.245  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started Persistence-MQTTConnectedAttributes (seda://PersistenceTopic)
+2024-08-17 04:57:58.245  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started Persistence-MonitorProvisioningConfigs (seda://PersistenceTopic)
+2024-08-17 04:57:58.246  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started AttributeEvent-Router (seda://AttributeEventRouter)
+2024-08-17 04:57:58.246  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started AttributeEvent-Processor1 (seda://AttributeEventProcessor1)
+2024-08-17 04:57:58.247  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started AttributeEvent-Processor2 (seda://AttributeEventProcessor2)
+2024-08-17 04:57:58.247  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started AttributeEvent-Processor3 (seda://AttributeEventProcessor3)
+2024-08-17 04:57:58.247  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started AttributeEvent-Processor4 (seda://AttributeEventProcessor4)
+2024-08-17 04:57:58.248  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started AttributeEvent-Processor5 (seda://AttributeEventProcessor5)
+2024-08-17 04:57:58.249  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started AttributeEvent-Processor6 (seda://AttributeEventProcessor6)
+2024-08-17 04:57:58.249  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started AttributeEvent-Processor7 (seda://AttributeEventProcessor7)
+2024-08-17 04:57:58.250  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started AttributeEvent-Processor8 (seda://AttributeEventProcessor8)
+2024-08-17 04:57:58.251  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started AttributeEvent-Processor9 (seda://AttributeEventProcessor9)
+2024-08-17 04:57:58.251  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started AttributeEvent-Processor10 (seda://AttributeEventProcessor10)
+2024-08-17 04:57:58.252  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started AttributeEvent-Processor11 (seda://AttributeEventProcessor11)
+2024-08-17 04:57:58.252  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started AttributeEvent-Processor12 (seda://AttributeEventProcessor12)
+2024-08-17 04:57:58.253  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started NotificationQueue (seda://NotificationQueue)
+2024-08-17 04:57:58.254  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started Persistence-PushNotificationConsoleAsset (seda://PersistenceTopic)
+2024-08-17 04:57:58.254  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started Persistence-GatewayConnection (seda://PersistenceTopic)
+2024-08-17 04:57:58.255  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started ClientInbound-Websocket (ws://0.0.0.0/websocket/events)
+2024-08-17 04:57:58.257  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started ClientInbound-EventProcessor (seda://ClientInboundQueue)
+2024-08-17 04:57:58.258  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started ClientOutbound-Splitter (seda://ClientPublishQueue)
+2024-08-17 04:57:58.258  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started ClientOutbound-Websocket (seda://ClientOutboundQueue)
+2024-08-17 04:57:58.259  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started Persistence-Ruleset (seda://PersistenceTopic)
+2024-08-17 04:57:58.259  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started Persistence-RulesRealm (seda://PersistenceTopic)
+2024-08-17 04:57:58.260  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started Persistence-RulesAsset (seda://PersistenceTopic)
+2024-08-17 04:57:58.260  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started Persistence-GeofenceAdapterConsoleAsset (seda://PersistenceTopic)
+2024-08-17 04:57:58.261  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started Persistence-ProvisioningConfig (seda://PersistenceTopic)
+2024-08-17 04:57:58.262  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started Persistence-EnergyOptimisation (seda://PersistenceTopic)
+2024-08-17 04:57:58.263  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext :     Started Persistence-ForecastConfiguration (seda://PersistenceTopic)
+2024-08-17 04:57:58.263  INFO    [main                          ] e.camel.impl.engine.AbstractCamelContext : Apache Camel 4.0.4 (camel-1) started in 466ms (build:0ms init:0ms start:466ms)
+2024-08-17 04:57:58.268  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.agent.AgentService
+2024-08-17 04:57:58.285  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.web.ManagerWebService
+2024-08-17 04:57:58.384  INFO    [main                          ] org.jboss.threads                        : JBoss Threads version 3.5.0.Final
+2024-08-17 04:57:58.449  INFO    [main                          ] org.openremote.container.web.WebService  : Webserver ready on http://0.0.0.0:8080
+2024-08-17 04:57:58.450  INFO    [main                          ] org.openremote.container.Container       : Starting service: org.openremote.manager.rules.geofence.ORConsoleGeofenceAssetAdapter
+2024-08-17 04:57:58.456  INFO    [main                          ] org.openremote.container.Container       : >>> Runtime container startup complete
